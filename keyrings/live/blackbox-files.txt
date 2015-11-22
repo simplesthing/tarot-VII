@@ -1,1 +1,2 @@
 app/models/cards.json
+app/models/celtic-cross-positions.json
