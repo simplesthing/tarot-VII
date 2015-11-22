@@ -22,6 +22,7 @@ app/images/tarot/trump/8_strength.jpg
 app/images/tarot/trump/9_hermit.jpg
 app/images/tarot/wands/1.jpg
 app/images/tarot/wands/2.jpg
+app/images/tarot/wands/3.jpg
 app/models/cards.json
 app/models/celtic-cross-positions.json
 app/models/colors.json
