@@ -1,14 +1,17 @@
 var fs = require('fs');
 
 var Model = function(){
-	var models = ['cards','celtic-cross-positions','colors','elements','energy','numbers','planets','zodiac'];
-	return {
-		models:models,
-		getModel: function(name){
-			return JSON.parse(fs.readFileSync(name, 'utf-8'));
-		},
-
-	};
+	var model = {};
+	model.models = ['cards','celtic-cross-positions','colors','elements','energy','numbers','planets','zodiac'];
+	model.models.map(function(m){
+ 		fs.readFile('./app/models/'+m+'.json', 'utf-8', function(err,data){
+ 			if(err) {
+ 				throw err;
+ 			}
+ 			model[m] = JSON.parse(data);
+ 		});
+ 	});
+	return model;
 };
 
 
