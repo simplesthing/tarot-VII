@@ -5,3 +5,4 @@ app/models/elements.json
 app/models/energy.json
 app/models/model.js
 app/models/numbers.json
+app/models/planets.json
