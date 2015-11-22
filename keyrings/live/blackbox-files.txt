@@ -1,4 +1,5 @@
 app/images/tarot/trump/0_fool.jpg
+app/images/tarot/trump/1_magicican.jpg
 app/models/cards.json
 app/models/celtic-cross-positions.json
 app/models/colors.json
