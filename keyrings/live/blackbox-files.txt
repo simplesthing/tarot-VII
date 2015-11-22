@@ -6,6 +6,7 @@ app/images/tarot/trump/4_emperor.jpg
 app/images/tarot/trump/5_hierophant.jpg
 app/images/tarot/trump/6_lovers.jpg
 app/images/tarot/trump/7_chariot.jpg
+app/images/tarot/trump/8_strength.jpg
 app/models/cards.json
 app/models/celtic-cross-positions.json
 app/models/colors.json
