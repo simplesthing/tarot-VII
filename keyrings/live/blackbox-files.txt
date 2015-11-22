@@ -7,6 +7,7 @@ app/images/tarot/trump/14_temperance.jpg
 app/images/tarot/trump/15_devil.jpg
 app/images/tarot/trump/16_tower.jpg
 app/images/tarot/trump/17_star.jpg
+app/images/tarot/trump/18_moon.jpg
 app/images/tarot/trump/1_magicican.jpg
 app/images/tarot/trump/2_high_priestess.jpg
 app/images/tarot/trump/3_empress.jpg
