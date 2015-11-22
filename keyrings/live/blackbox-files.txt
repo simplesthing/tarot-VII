@@ -3,7 +3,6 @@ app/models/celtic-cross-positions.json
 app/models/colors.json
 app/models/elements.json
 app/models/energy.json
-app/models/model.js
 app/models/numbers.json
 app/models/planets.json
 app/models/zodiac.json
