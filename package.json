@@ -3,8 +3,9 @@
   "description": "Seventh Generation tarot application.",
   "version": "0.0.0",
   "devDependencies": {
-    "requirejs":"2.0",
-    "mocha":"1.8",
-    "chai":"1.5"
+    "babel-core": "^6.2.1",
+    "chai": "1.5",
+    "mocha": "1.8",
+    "requirejs": "2.0"
   }
 }
