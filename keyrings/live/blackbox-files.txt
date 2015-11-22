@@ -1,4 +1,5 @@
 app/images/tarot/trump/0_fool.jpg
+app/images/tarot/trump/10_wheel.jpg
 app/images/tarot/trump/1_magicican.jpg
 app/images/tarot/trump/2_high_priestess.jpg
 app/images/tarot/trump/3_empress.jpg
