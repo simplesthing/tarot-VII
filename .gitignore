@@ -1,0 +1,12 @@
+/keyrings/live/pubring.gpg~
+/keyrings/live/pubring.kbx~
+/keyrings/live/secring.gpg
+/models/cards.json
+/models/celtic-cross-positions.json
+/models/colors.json
+/models/elements.json
+/models/energy.json
+/models/numbers.json
+/models/planets.json
+/models/zodiac.json
+/node_modules
