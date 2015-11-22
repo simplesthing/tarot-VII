@@ -1,19 +1,45 @@
 var Model = require('./helpers/model');
 var model = new Model();
 
-describe('Testing Model', function(done){
-    it('initializes a model', function(){
+
+describe('Cards', function(){
+	it('should initialize', function(){
       chai.expect(typeof model).to.be.equal('object');
       chai.expect(model.models).to.be.an('Array');
     });
-});
 
-
-
-describe('Cards', function(){
 	var elementalCards, planetaryCards, zodiacalCards;
 	it('should contain 78 cards', function(){
 		chai.expect(model.cards.length).to.be.equal(78);
+	});
+
+	describe('Props', function(){
+		var majorArcana;
+		it('should have an index', function(){
+			model.cards.forEach(function(card){
+				chai.expect(card.index).to.be.an('Number');
+			});
+		});
+		it('should have an arcana', function(){
+			majorArcana = model.cards.filter(function(card){
+				chai.expect(card.arcana).to.be.an('String');
+				if(card.arcana === 'major') {return true;}
+			});
+		});
+		it('should have 22 Major Arcana cards', function(){
+			chai.expect(majorArcana.length).to.be.equal(22);
+		});
+		it('should have a name', function(){
+			model.cards.forEach(function(card){
+				chai.expect(card.name).to.be.an('String');
+			});
+		});
+		it('should have an image', function(){
+			model.cards.forEach(function(card){
+				chai.expect(card.image).to.be.an('String');
+			});
+		});
+		
 	});
 
 	describe('Energy', function(){
@@ -74,23 +100,25 @@ describe('Cards', function(){
 			it('should have 12 zodiacal cards', function(){
 				chai.expect(zodiacCards.length).to.be.equal(12);
 			});
-			it('should findmatching zodiac sign in zodiac model', function(){
+			it('should find matching zodiac sign in zodiac model', function(){
 				zodiacCards.forEach(function(zc){
 					chai.expect(model.zodiac.some(el => el.name === zc.has.zodiac_name));
 				});
 			});
 		});
+	});
 
-		describe('Color', function(){
-			it('should have a color_name', function(){
-				model.cards.forEach(function(card){
-					chai.expect	(card.has.color_name).to.be.an('String');
-				});
-				
+	describe('Color', function(){
+		it('should have a color_name', function(){
+			model.cards.forEach(function(card){
+				chai.expect	(card.has.color_name).to.be.an('String');
+			});
+		});
+		it('should find matching colors in color model', function(){
+			model.cards.forEach(function(card){
+				chai.expect(model.colors.some(el => el.name === card.has.color_name)).to.be.true;
 			});
 		});
 	});
-
-	
 	
 });

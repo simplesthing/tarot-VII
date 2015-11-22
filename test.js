@@ -12,5 +12,6 @@ global.window = global;
 
 // this would be the place to load library dependencies, like jQuery
 
-mocha.addFile('./tests/cards');
+mocha.addFile('./app/models/test/cards');
+mocha.addFile('./app/modules/roman-numerals/test/roman-numerals');
 mocha.run();
