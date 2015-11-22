@@ -24,6 +24,7 @@ app/images/tarot/wands/1.jpg
 app/images/tarot/wands/2.jpg
 app/images/tarot/wands/3.jpg
 app/images/tarot/wands/4.jpg
+app/images/tarot/wands/5.jpg
 app/models/cards.json
 app/models/celtic-cross-positions.json
 app/models/colors.json
