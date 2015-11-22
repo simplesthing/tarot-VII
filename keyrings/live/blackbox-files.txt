@@ -24,6 +24,7 @@ app/images/tarot/wands/1.jpg
 app/images/tarot/wands/10.jpg
 app/images/tarot/wands/11.jpg
 app/images/tarot/wands/12.jpg
+app/images/tarot/wands/13.jpg
 app/images/tarot/wands/2.jpg
 app/images/tarot/wands/3.jpg
 app/images/tarot/wands/4.jpg
