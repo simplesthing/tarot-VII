@@ -4,6 +4,7 @@ app/images/tarot/trump/2_high_priestess.jpg
 app/images/tarot/trump/3_empress.jpg
 app/images/tarot/trump/4_emperor.jpg
 app/images/tarot/trump/5_hierophant.jpg
+app/images/tarot/trump/6_lovers.jpg
 app/models/cards.json
 app/models/celtic-cross-positions.json
 app/models/colors.json
