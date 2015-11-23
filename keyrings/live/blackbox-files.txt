@@ -1,4 +1,3 @@
-app/images/tarot/trump/16_tower.jpg
 app/images/tarot/trump/17_star.jpg
 app/images/tarot/trump/18_moon.jpg
 app/images/tarot/trump/19_sun.jpg
