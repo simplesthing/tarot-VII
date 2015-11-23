@@ -8,7 +8,6 @@ app/images/tarot/trump/16_tower.jpg
 app/images/tarot/trump/17_star.jpg
 app/images/tarot/trump/18_moon.jpg
 app/images/tarot/trump/19_sun.jpg
-app/images/tarot/trump/1_magicican.jpg
 app/images/tarot/trump/20_judgement.jpg
 app/images/tarot/trump/21_universe.jpg
 app/images/tarot/trump/2_high_priestess.jpg
