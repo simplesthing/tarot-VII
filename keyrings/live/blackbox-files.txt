@@ -1,4 +1,3 @@
-app/images/tarot/trump/10_wheel.jpg
 app/images/tarot/trump/11_justice.jpg
 app/images/tarot/trump/12_hanged_man.jpg
 app/images/tarot/trump/13_death.jpg
