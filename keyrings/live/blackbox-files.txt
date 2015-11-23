@@ -10,7 +10,6 @@ app/images/tarot/trump/18_moon.jpg
 app/images/tarot/trump/19_sun.jpg
 app/images/tarot/trump/20_judgement.jpg
 app/images/tarot/trump/21_universe.jpg
-app/images/tarot/trump/2_high_priestess.jpg
 app/images/tarot/trump/3_empress.jpg
 app/images/tarot/trump/4_emperor.jpg
 app/images/tarot/trump/5_hierophant.jpg
