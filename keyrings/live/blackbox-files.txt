@@ -17,6 +17,7 @@ app/images/tarot/swords/10.jpg
 app/images/tarot/swords/11.jpg
 app/images/tarot/swords/12.jpg
 app/images/tarot/swords/13.jpg
+app/images/tarot/swords/14.jpg
 app/images/tarot/swords/2.jpg
 app/images/tarot/swords/3.jpg
 app/images/tarot/swords/4.jpg
