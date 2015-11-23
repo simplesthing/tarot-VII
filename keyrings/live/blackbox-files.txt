@@ -1,4 +1,5 @@
 app/images/tarot/cups/1.jpg
+app/images/tarot/cups/10.jpg
 app/images/tarot/cups/2.jpg
 app/images/tarot/cups/3.jpg
 app/images/tarot/cups/4.jpg
