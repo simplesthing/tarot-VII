@@ -1,4 +1,3 @@
-app/images/tarot/trump/14_temperance.jpg
 app/images/tarot/trump/15_devil.jpg
 app/images/tarot/trump/16_tower.jpg
 app/images/tarot/trump/17_star.jpg
