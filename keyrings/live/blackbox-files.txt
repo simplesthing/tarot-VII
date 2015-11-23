@@ -1,3 +1,4 @@
+app/images/tarot/trump/1.jpg
 app/images/tarot/wands/1.jpg
 app/images/tarot/wands/10.jpg
 app/images/tarot/wands/11.jpg
