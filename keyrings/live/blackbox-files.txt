@@ -7,6 +7,7 @@ app/images/tarot/trump/14.jpg
 app/images/tarot/trump/15.jpg
 app/images/tarot/trump/16.jpg
 app/images/tarot/trump/17.jpg
+app/images/tarot/trump/18.jpg
 app/images/tarot/trump/2.jpg
 app/images/tarot/trump/3.jpg
 app/images/tarot/trump/4.jpg
