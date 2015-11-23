@@ -16,6 +16,7 @@ app/images/tarot/swords/1.jpg
 app/images/tarot/swords/2.jpg
 app/images/tarot/swords/3.jpg
 app/images/tarot/swords/4.jpg
+app/images/tarot/swords/5.jpg
 app/images/tarot/trump/0.jpg
 app/images/tarot/trump/1.jpg
 app/images/tarot/trump/10.jpg
