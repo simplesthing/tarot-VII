@@ -14,7 +14,7 @@ define(function(require){
     div = document.createElement('div');
     div.style.width ='100px';
     div.style.height ='100px';
-    div.style.background ='#ccc';
+    div.style.background ='#bacd11';
     div.style.position ='absolute';
     div.style.top = elPos.y +'px';
     div.style.left = elPos.x + 'px';

@@ -6,7 +6,10 @@ var errorHandler = require('./util/errorHandler');
 var Config = {
   app: './app',
   index: './app/index.html',
-  appjs: ['./app/**/*.js'],
+  appjs: ['./app/**/*.js', '!./app/**/test/**'],
+  styles: './app/**/*.scss',
+  images: './app/images/**',
+  json:'./app/models/*.json',
   build: './build',
   log: log,
   errorHandler : errorHandler

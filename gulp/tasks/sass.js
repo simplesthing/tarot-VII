@@ -9,11 +9,11 @@ gulp.task('sass', function(){
   config.log('Compiling SASS --> CSS');
 
   return  gulp
-          .src(config.sass)
-          .pipe($.sass(config.sass)).on('error', config.errorHandler('Sass'))
+          .src(config.styles)
+          .pipe($.sass(config.styles)).on('error', config.errorHandler('Sass'))
           .pipe($.autoprefixer()).on('error', config.errorHandler('Autoprefixer'))
           .pipe($.sourcemaps.write('./'))
-          .pipe(gulp.dest(config.css))
+          .pipe(gulp.dest(config.build))
           .pipe(browserSync.reload({
             stream: true 
           }));
