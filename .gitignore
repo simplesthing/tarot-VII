@@ -1,8 +1,13 @@
+/node_modules
+/bower_components
+/build
+/dist
+
 *.swp
 /keyrings/live/pubring.gpg~
 /keyrings/live/pubring.kbx~
 /keyrings/live/secring.gpg
-/node_modules
+
 /app/models/cards.json
 /app/models/celtic-cross-positions.json
 /app/models/colors.json

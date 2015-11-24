@@ -1,3 +1,5 @@
+'use strict';
+
 var Model = require('./helpers/model');
 var model = new Model();
 
@@ -8,18 +10,14 @@ describe('Cards', function(){
       chai.expect(model.models).to.be.an('Array');
     });
 
-	var elementalCards, planetaryCards, zodiacalCards;
+	var elementalCards, planetaryCards, zodiacCards;
+
 	it('should contain 78 cards', function(){
 		chai.expect(model.cards.length).to.be.equal(78);
 	});
 
 	describe('Props', function(){
 		var majorArcana;
-		it('should have an index', function(){
-			model.cards.forEach(function(card){
-				chai.expect(card.index).to.be.an('Number');
-			});
-		});
 		it('should have an arcana', function(){
 			majorArcana = model.cards.filter(function(card){
 				chai.expect(card.arcana).to.be.an('String');
@@ -34,12 +32,6 @@ describe('Cards', function(){
 				chai.expect(card.name).to.be.an('String');
 			});
 		});
-		it('should have an image', function(){
-			model.cards.forEach(function(card){
-				chai.expect(card.image).to.be.an('String');
-			});
-		});
-		
 	});
 
 	describe('Energy', function(){
@@ -50,7 +42,6 @@ describe('Cards', function(){
 			});
 		});
 		describe('Elemental Cards', function(){
-			var elementalCards;
 			it('should have element_name', function(){
 			 elementalCards = model.cards.filter(function(card){
 					if(card.has.energy_name === 'elemental') {
@@ -69,7 +60,6 @@ describe('Cards', function(){
 			});
 		});
 		describe('Planetary Cards', function(){
-			var planetaryCards;
 			it('should have planet_name', function(){
 				planetaryCards = model.cards.filter(function(card){
 					if(card.has.energy_name === 'planetary'){
@@ -88,7 +78,6 @@ describe('Cards', function(){
 			});
 		});
 		describe('Zodiac Cards', function(){
-			var zodiacCards;
 			it('should have zodiac_name', function(){
 				zodiacCards = model.cards.filter(function(card){
 					if(card.has.energy_name === 'zodiacal'){
@@ -120,5 +109,5 @@ describe('Cards', function(){
 			});
 		});
 	});
-	
+
 });

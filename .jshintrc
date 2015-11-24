@@ -1,4 +1,31 @@
 {
-	// Allow ES6 features
-	"esnext": true
+  "node": true,
+  "browser": true,
+  "esnext": true,
+  "bitwise": true,
+  "camelcase": false,
+  "curly": true,
+  "eqeqeq": true,
+  "immed": true,
+  "indent": 2,
+  "newcap": true,
+  "noarg": true,
+  "quotmark": "single",
+  "undef": true,
+  "unused": "vars",
+  "strict": true,
+  "validthis": true,
+  "globals": {
+    "chai":true,
+    "define": false,
+    "describe": false,
+    "xdescribe": false,
+    "ddescribe": false,
+    "it": false,
+    "xit": false,
+    "iit": false,
+    "expect": false
+  }
 }
+
+

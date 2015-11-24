@@ -1,11 +1,15 @@
+'use strict';
+
 define(function(require){
-	var Cards = function(){
+  var popup = require('../modules/popup/popup');
+
+  var Cards = function(){
 		var model = {};
 
 		var init =  function(path, callback){
 			var httpRequest = new XMLHttpRequest();
 			httpRequest.onreadystatechange = function(){
-				if(this.readyState == 4) {
+				if(this.readyState === 4) {
 					var data = JSON.parse(httpRequest.responseText);
 					if(callback) callback(data);
 				}
@@ -17,8 +21,8 @@ define(function(require){
 		model.handleCardClick = function(evt){
 			evt.preventDefault();
 			evt.stopPropagation();
+      popup.addPopUp(evt.target.id);
 
-			console.log(event.target);
 		};
 
 		model.addCardsToDOM = function(container){
@@ -39,7 +43,7 @@ define(function(require){
 					h2.innerHTML = card.suit;
 					_container.appendChild(h2);
 				}
-				var img = document.createElement("img");
+				var img = document.createElement('img');
 				img.setAttribute('id', i);
 				img.setAttribute('alt', card.name);
 				img.src = 'images/tarot/'+card.suit+'/'+card.number+'.jpg';
@@ -49,8 +53,6 @@ define(function(require){
 			});
 		};
 
-
-		
 		init('models/cards.json', function(data){
 			model.cards = data;
 			model.addCardsToDOM('cards');
@@ -59,6 +61,6 @@ define(function(require){
 		return model;
 	};
 
-	Cards();
+	var cards = new Cards();
 
 });
