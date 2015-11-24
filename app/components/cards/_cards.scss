@@ -1,16 +1,85 @@
-.card-popup {
-  min-height: 100px;
-  background: $white;
-  border:solid $black 1px;
+.popup {
+  position:absolute;
 
-  .card-popup__inner {
-    width:80%;
-    margin: 20px 0 20px 15px;
+  .popup__content{
+    position:relative;
+    min-height: 100px;
+    background:$white;
+    border:solid $black 1px;
   }
 
-  .card-popup__pointer {
-    width: 15px;
-    height:15px;
-    background:red;
+  .popup__pointer {
+    display:inline-block;
+    position: absolute;
+    background: #ffffff;
+    border: 1px solid #000;
+    &:after, &:before {
+        top: -70px;
+        border: solid transparent;
+        content: " ";
+        height: 0;
+        width: 0;
+        position: absolute;
+        pointer-events: none;
+    }
   }
+
+  .popup__close {
+    display: inline-block;
+    width:24px;
+    height:24px;
+    float: right;
+    margin: 5px 0;
+    color:$black;
+    font-size: 20px;
+    &:hover {
+      color:$orange;
+    }
+  }
+
+  &.popup--left {
+    .popup__content{
+      left:15px;
+    }
+    .popup__pointer {
+      &:after {
+        left: 100%;
+        border-color: rgba(255, 255, 255, 0);
+        border-left-color: #ffffff;
+        border-width: 15px;
+        margin-top: -15px;
+      }
+      &:before {
+        left: 100%;
+        border-color: rgba(0, 0, 0, 0);
+        border-left-color: #000;
+        border-width: 16px;
+        margin-top: -16px;
+      }
+      right:-2px;
+    }
+  }
+  &.popup--right{
+    .popup__content{
+      margin-right:15px;
+    }
+    .popup__pointer {
+      &:after {
+        right: 100%;
+        border-color: rgba(255, 255, 255, 0);
+        border-right-color: #ffffff;
+        border-width: 15px;
+        margin-top: -15px;
+      }
+      &:before {
+        right: 100%;
+        border-color: rgba(0, 0, 0, 0);
+        border-right-color: #000;
+        border-width: 16px;
+        margin-top: -16px;
+      }
+    }
+  }
+
+
 }

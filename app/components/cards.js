@@ -11,7 +11,7 @@ define(function(require){
 			httpRequest.onreadystatechange = function(){
 				if(this.readyState === 4) {
 					var data = JSON.parse(httpRequest.responseText);
-					if(callback) callback(data);
+					if(callback) { callback(data); }
 				}
 			};
 			httpRequest.open('GET', path);
@@ -21,8 +21,8 @@ define(function(require){
 		model.handleCardClick = function(evt){
 			evt.preventDefault();
 			evt.stopPropagation();
-      popup.addPopUp(evt.target.id);
-
+      popup.addPU(evt.target.id);
+      // popup.addPopUp(evt.target.id);
 		};
 
 		model.addCardsToDOM = function(container){
@@ -61,6 +61,6 @@ define(function(require){
 		return model;
 	};
 
-	var cards = new Cards();
+	var cards = new Cards(); //jshint ignore:line
 
 });

@@ -16,6 +16,7 @@
   "strict": true,
   "validthis": true,
   "globals": {
+    "requirejs": true,
     "chai":true,
     "define": false,
     "describe": false,

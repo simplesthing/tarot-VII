@@ -2,53 +2,63 @@
 
 define(function(require){
   var helper = require('../helpers/helpers');
-  var model = {};
 
   function Popup(){
-    let outer = document.createElement('div');
-    outer.style.width = (window.innerWidth/2)+'px';
-    outer.classList.add('card-popup');
-
-    let inner = document.createElement('div');
-    inner.classList.add('card-popup__inner');
-
-    let pointer = document.createElement('span');
-    pointer.classList.add('card-popup__pointer');
-
-    outer.appendChild(inner);
-    outer.appendChild(pointer);
-
-    return outer;
+    let model = {};
+    // popup defaults
+    model.container = document.createElement('div');
+    model.container.classList.add('popup');
+    model.container.style.position ='absolute';
+    model.container.style.zIndex = '10';
+    // content
+    model.content = document.createElement('div');
+    model.content.classList.add('popup__content');
+    // pointer
+    model.pointer = document.createElement('span');
+    model.pointer.classList.add('popup__pointer');
+    // close button
+    model.close = document.createElement('span');
+    model.close.classList.add('popup__close', 'fa', 'fa-times');
+    // build popup
+    model.content.appendChild(model.close);
+    model.container.appendChild(model.content);
+    model.container.appendChild(model.pointer);
+    // return popup
+    return model;
   }
 
-  model.addPopUp = function(elem){
-    var el, elPos, popup, offsetLeft;
+  function destroyPopup(){
+     document.body.removeChild(this.popup.container);
+     delete this.popup;
+  }
 
-    // get exact location of card x and y
-    el = document.getElementById(elem);
-    elPos = helper.getPosition(el);
+  return {
+    addPU: function(elem){
+      let el = document.getElementById(elem),
+          elPos = helper.getPosition(el),
+          winWidth = window.innerWidth,
+          pointerWidth = 15,
+          margin = 20,
+          contentWidth = (winWidth/2) - pointerWidth - margin,
+          side = elPos.x > (winWidth/2 - 100) ? 'left' : 'right',
+          offsetLeft =  side === 'left' ? -contentWidth-pointerWidth -margin/2 - 2 : 100 + margin/2;
 
-    // determine if element is on left or right offsetLeft of screen
-    offsetLeft = (elPos.x >  window.innerWidth/2) -100 ? -window.innerWidth/2:  100 ;
+      if(this.popup) { destroyPopup.call(this);}
+      this.popup = new Popup();
 
-    popup = new Popup();
-    // popup = document.createElement('div');
-    popup.style.width = (window.innerWidth/2)+'px';
-    // popup.classList.add('card-popup');
-
-    popup.style.position ='absolute';
-    popup.style.top = elPos.y +'px';
-
-    popup.style.left = (elPos.x + offsetLeft) + 'px';
-
-    popup.style.zIndex = '10';
-    document.body.appendChild(popup);
-
-
-      // attach a popup div to page
-
-
-    };
-
-    return model;
-  });
+      // position popup
+      this.popup.container.style.width = contentWidth+ pointerWidth+'px';
+      this.popup.container.style.top = elPos.y +'px';
+      this.popup.container.style.left = (elPos.x + offsetLeft) + 'px';
+      this.popup.container.classList.add('popup--'+side);
+      // content width
+      this.popup.content.style.width = contentWidth + 'px';
+      // bind close event
+      this.popup.close.addEventListener('click', this.closePU.bind(this, false));
+      document.body.appendChild(this.popup.container);
+    },
+    closePU: function(){
+      destroyPopup.call(this);
+    }
+  };
+});

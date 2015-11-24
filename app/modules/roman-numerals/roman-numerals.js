@@ -1,8 +1,10 @@
+'use strict';
+
 var R = require('ramda');
 
 function RomanNumerals(){
 	var model = this;
-	
+
 	model.convertArgsToArray = function(args){
 		return args.toString().split('').reverse();
 	};
@@ -22,7 +24,7 @@ function RomanNumerals(){
 			};
 
 			arg[0] = map[arg[0]];
-		} 
+		}
 		return arg;
 	};
 	model.checkTens = function(arg){
@@ -39,7 +41,7 @@ function RomanNumerals(){
 				'9':'XC'
 			};
 			arg[1] = map[arg[1]];
-		} 
+		}
 		return arg;
 	};
 
@@ -57,7 +59,7 @@ function RomanNumerals(){
 				'9':'CM'
 			};
 			arg[2] = map[arg[2]];
-		} 
+		}
 		return arg;
 	};
 
@@ -65,7 +67,7 @@ function RomanNumerals(){
 		if(arg.length > 3) {
 			var map = {
 				'1':'M',
-				'2':'MM',	
+				'2':'MM',
 				'3':'MMM',
 				'4':'MMMM',
 				'5':'MMMMM',
@@ -75,15 +77,15 @@ function RomanNumerals(){
 				'9':'MMMMMMMMM'
 			};
 			arg[3] = map[arg[3]];
-		} 
+		}
 		return arg;
 	};
 
 	model.composition = R.compose(
-							model.checkThousands, 
-							model.checkHundreds, 
-							model.checkTens, 
-							model.checkOnes, 
+							model.checkThousands,
+							model.checkHundreds,
+							model.checkTens,
+							model.checkOnes,
 							model.convertArgsToArray);
 
 	model.integerToRomanNumeral = function(arg){
