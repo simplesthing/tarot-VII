@@ -1,7 +1,6 @@
 // main sass file
-body {
-  background: #ccc;
-  h2 {
-    color: blue;
-  }
-}
+@import "variables";
+@import "main";
+@import "../components/cards/cards";
+
+
