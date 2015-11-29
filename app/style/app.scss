@@ -1,6 +1,9 @@
 // main sass file
+@import "reset";
 @import "variables";
+@import "mixins";
 @import "main";
+@import "home";
 @import "../components/cards/cards";
 
 

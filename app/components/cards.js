@@ -22,7 +22,6 @@ define(function(require){
 			evt.preventDefault();
 			evt.stopPropagation();
       popup.addPU(evt.target.id);
-      // popup.addPopUp(evt.target.id);
 		};
 
 		model.addCardsToDOM = function(container){

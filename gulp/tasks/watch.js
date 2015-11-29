@@ -17,6 +17,13 @@ gulp.task('watch:sass', function(){
 });
 
 
+gulp.task('watch:index', function(){
+  config.log('Watching index');
+
+  gulp.watch([config.index], ['html']);
+});
 
 
-gulp.task('watch', ['watch:appjs', 'watch:sass']);
+
+
+gulp.task('watch', ['watch:appjs', 'watch:sass','watch:index']);

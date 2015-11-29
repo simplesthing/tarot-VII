@@ -1,0 +1,46 @@
+/* Smallest viewport ----------- */
+body, html {
+  width:100%;
+  height:100%;
+  margin:0;
+  font-size:4.5vw;
+  background:#cbcacb;
+}
+
+.page {
+  width:100%;
+  height:100%;
+}
+
+
+
+/* Small viewport ----------- */
+@media only screen  and (min-width : 420px) {
+  body, html {
+    font-size: 3.5vw;
+  }
+}
+
+/* Medium viewport ----------- */
+@media only screen  and (min-width : 768px) {
+  body, html {
+    font-size: 2vw;
+  }
+}
+
+/* Average viewport ----------- */
+@media only screen  and (min-width : 1224px) {
+  body, html {
+    font-size: 1.25vw;
+  }
+}
+
+/* Large viewport ----------- */
+@media only screen  and (min-width : 1824px) {
+  body, html {
+    font-size: 1vw;
+  }
+}
+
+
+
