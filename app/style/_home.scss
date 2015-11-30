@@ -32,11 +32,20 @@
       .icon {
         width: 8vmin;
         height: 6vmin;
-        background:url(../images/tetractys.svg) no-repeat;
-        background-size: 7vmin 6vmin;
+
         position:absolute;
-        left:7%;
-        top:14%;
+        &.tetractys {
+          background:url(../images/tetractys.svg) no-repeat;
+          background-size: 7vmin 6vmin;
+          top:12%;
+          left:7%;
+        }
+        &.tree-of-life {
+          background: (url(../images/tree_of_life_hebrew.svg)) no-repeat;
+          background-size: 7vmin 6vmin;
+          top:12%;
+          left:84%;
+        }
       }
       h1 {
         font-family: Verdana, Geneva, sans-serif;
