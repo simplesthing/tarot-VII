@@ -1,0 +1,254 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* Smallest viewport ----------- */
+body, html {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  font-size: 4.5vw;
+  background: #cbcacb; }
+
+.page {
+  width: 100%;
+  height: 100%; }
+
+/* Small viewport ----------- */
+@media only screen and (min-width: 420px) {
+  body, html {
+    font-size: 3.5vw; } }
+
+/* Medium viewport ----------- */
+@media only screen and (min-width: 768px) {
+  body, html {
+    font-size: 2vw; } }
+
+/* Average viewport ----------- */
+@media only screen and (min-width: 1224px) {
+  body, html {
+    font-size: 1.25vw; } }
+
+/* Large viewport ----------- */
+@media only screen and (min-width: 1824px) {
+  body, html {
+    font-size: 1vw; } }
+
+.home main {
+  text-align: center;
+  position: relative; }
+  .home main h1 {
+    font-family: Verdana, Geneva, sans-serif;
+    font-weight: 100; }
+  .home main img {
+    width: 40vw;
+    margin-top: 1.25vmin; }
+    .home main img.arrow {
+      width: 7vw;
+      position: relative;
+      top: 1vh; }
+
+.home footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0; }
+  .home footer .tag {
+    width: 50vw;
+    margin: 0 auto;
+    background: #FFFFFF;
+    text-align: center;
+    position: relative; }
+    .home footer .tag .icon {
+      width: 8vmin;
+      height: 6vmin;
+      position: absolute; }
+      .home footer .tag .icon.tetractys {
+        background: url(../images/tetractys.svg) no-repeat;
+        background-size: 7vmin 6vmin;
+        top: 12%;
+        left: 7%; }
+      .home footer .tag .icon.tree-of-life {
+        background: url(../images/tree_of_life_hebrew.svg) no-repeat;
+        background-size: 7vmin 6vmin;
+        top: 12%;
+        left: 84%; }
+    .home footer .tag h1 {
+      font-family: Verdana, Geneva, sans-serif;
+      font-size: 4vw;
+      font-weight: 100;
+      margin: 1.25vmin; }
+    .home footer .tag p {
+      font-size: 3vw; }
+
+@media only screen and (max-height: 360px) {
+  footer {
+    display: none; } }
+
+/* Small viewport ----------- */
+@media only screen and (min-width: 420px) {
+  .home main img {
+    width: 33vw; }
+    .home main img.arrow {
+      width: 6vw; }
+  .home footer .tag h1 {
+    font-size: 3.5vw; }
+  .home footer .tag p {
+    font-size: 3vw; } }
+
+@media only screen and (min-width: 420px) and (max-height: 560px) {
+  footer {
+    display: none; } }
+
+/* Medium viewport ----------- */
+@media only screen and (min-width: 768px) {
+  .home main img {
+    width: 30vw; }
+    .home main img.arrow {
+      width: 5vw; }
+  .home footer .tag {
+    width: 45vw; }
+    .home footer .tag h1 {
+      font-size: 3vw; }
+    .home footer .tag p {
+      font-size: 2.5vw; } }
+
+@media only screen and (min-width: 768px) and (max-height: 795px) {
+  footer {
+    display: none; } }
+
+/* Average viewport ----------- */
+@media only screen and (min-width: 1224px) {
+  .home main img {
+    width: 20vw; }
+    .home main img.arrow {
+      width: 3.5vw; }
+  .home footer .tag {
+    width: 35vw; }
+    .home footer .tag h1 {
+      font-size: 2.5vw; }
+    .home footer .tag p {
+      font-size: 2vw; } }
+
+@media only screen and (min-width: 1224px) and (max-height: 825px) {
+  footer {
+    display: none; } }
+
+/* Large viewport ----------- */
+@media only screen and (min-width: 1824px) {
+  .home main img {
+    width: 17vw; }
+    .home main img.arrow {
+      width: 2.5vw; }
+  .home footer .tag h1 {
+    font-size: 2vw; }
+  .home footer .tag p {
+    font-size: 1.5vw; } }
+
+@media only screen and (min-width: 1824px) and (max-height: 980px) {
+  footer {
+    display: none; } }
+
+.popup {
+  position: absolute; }
+  .popup .popup__content {
+    position: relative;
+    min-height: 100px;
+    background: #FFFFFF;
+    border: solid #0A0A0A 1px; }
+  .popup .popup__pointer {
+    display: inline-block;
+    position: absolute;
+    background: #ffffff;
+    border: 1px solid #000; }
+    .popup .popup__pointer:after, .popup .popup__pointer:before {
+      top: -70px;
+      border: solid transparent;
+      content: " ";
+      height: 0;
+      width: 0;
+      position: absolute;
+      pointer-events: none; }
+  .popup .popup__close {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    float: right;
+    margin: 5px 0;
+    color: #0A0A0A;
+    font-size: 20px; }
+    .popup .popup__close:hover {
+      color: #ff3305; }
+  .popup.popup--left .popup__content {
+    left: 15px; }
+  .popup.popup--left .popup__pointer {
+    right: -2px; }
+    .popup.popup--left .popup__pointer:after {
+      left: 100%;
+      border-color: rgba(255, 255, 255, 0);
+      border-left-color: #ffffff;
+      border-width: 15px;
+      margin-top: -15px; }
+    .popup.popup--left .popup__pointer:before {
+      left: 100%;
+      border-color: transparent;
+      border-left-color: #000;
+      border-width: 16px;
+      margin-top: -16px; }
+  .popup.popup--right .popup__content {
+    margin-right: 15px; }
+  .popup.popup--right .popup__pointer:after {
+    right: 100%;
+    border-color: rgba(255, 255, 255, 0);
+    border-right-color: #ffffff;
+    border-width: 15px;
+    margin-top: -15px; }
+  .popup.popup--right .popup__pointer:before {
+    right: 100%;
+    border-color: transparent;
+    border-right-color: #000;
+    border-width: 16px;
+    margin-top: -16px; }
