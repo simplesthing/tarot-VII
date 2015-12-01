@@ -1,4 +1,3 @@
-app/images/tarot/coins/1.jpg
 app/images/tarot/coins/10.jpg
 app/images/tarot/coins/11.jpg
 app/images/tarot/coins/12.jpg
