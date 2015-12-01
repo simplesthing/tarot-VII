@@ -1,4 +1,3 @@
-app/images/tarot/swords/10.jpg
 app/images/tarot/swords/11.jpg
 app/images/tarot/swords/12.jpg
 app/images/tarot/swords/13.jpg
