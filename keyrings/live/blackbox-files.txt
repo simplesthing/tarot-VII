@@ -3,7 +3,6 @@ app/images/tarot/coins/11.jpg
 app/images/tarot/coins/12.jpg
 app/images/tarot/coins/13.jpg
 app/images/tarot/coins/14.jpg
-app/images/tarot/coins/8.jpg
 app/images/tarot/coins/9.jpg
 app/images/tarot/cups/1.jpg
 app/images/tarot/cups/10.jpg
