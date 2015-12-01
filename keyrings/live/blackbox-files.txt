@@ -1,4 +1,3 @@
-app/images/tarot/cups/12.jpg
 app/images/tarot/cups/13.jpg
 app/images/tarot/cups/14.jpg
 app/images/tarot/swords/1.jpg
