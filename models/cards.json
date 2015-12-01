@@ -1,0 +1,866 @@
+[
+    {
+        "number": 0,
+        "arcana": "major",
+        "name": "Fool",
+        "suit":"trump",
+        "has": {
+            "energy_name": "elemental",
+            "element_name": "air",
+            "color_name": "pale yellow"
+        }
+    },
+    {
+        "number": 1,
+        "arcana": "major",
+        "name": "Magician",
+        "suit":"trump",
+        "has": {
+            "energy_name": "planetary",
+            "planet_name": "Mercury",
+            "color_name": "yellow"
+        }
+    },
+    {
+        "number": 2,
+        "arcana": "major",
+        "name": "High Priestess",
+        "suit":"trump",
+        "has": {
+            "energy_name": "planetary",
+            "planet_name": "Moon",
+            "color_name": "blue"
+        }
+    },
+    {
+        "number": 3,
+        "arcana": "major",
+        "name": "Empress",
+        "suit":"trump",
+        "has": {
+            "energy_name": "planetary",
+            "planet_name": "Venus",
+            "color_name": "emerald green"
+        }
+    },
+    {
+        "number": 4,
+        "arcana": "major",
+        "name": "Emperor",
+        "suit":"trump",
+        "has": {
+            "energy_name": "zodiacal",
+            "zodiac_name": "Aries",
+            "color_name": "red"
+        }
+    },
+    {
+        "number": 5,
+        "arcana": "major",
+        "name": "Hierophant",
+        "suit":"trump",
+        "has": {
+            "energy_name": "zodiacal",
+            "zodiac_name": "Taurus",
+            "color_name": "red orange"
+        }
+    },
+    {
+        "number": 6,
+        "arcana": "major",
+        "suit":"trump",
+        "name": "Lovers",
+        "has": {
+            "energy_name": "zodiacal",
+            "zodiac_name": "Gemini",
+            "color_name": "orange"
+        }
+    },
+    {
+        "number": 7,
+        "arcana": "major",
+        "suit":"trump",
+        "name": "Chariot",
+        "has": {
+            "energy_name": "zodiacal",
+            "zodiac_name": "Cancer",
+            "color_name": "amber"
+        }
+    },
+    {
+        "number": 8,
+        "arcana": "major",
+        "suit":"trump",
+        "name": "Strength",
+        "has": {
+            "energy_name": "zodiacal",
+            "zodiac_name": "Leo",
+            "color_name": "yellow-greenish"
+        }
+    },
+    {
+        "number": 9,
+        "arcana": "major",
+        "suit":"trump",
+        "name": "Hermit",
+        "has": {
+            "energy_name": "zodiacal",
+            "zodiac_name": "Virgo",
+            "color_name": "green-yellowish"
+        }
+    },
+    {
+        "number": 10,
+        "arcana": "major",
+        "suit":"trump",
+        "name": "Wheel of Fortune",
+        "has": {
+            "energy_name": "planetary",
+            "planet_name": "Jupiter",
+            "color_name": "purple"
+        }
+    },
+    {
+        "number": 11,
+        "arcana": "major",
+        "suit":"trump",
+        "name": "Justice",
+        "has": {
+            "energy_name": "zodiacal",
+            "zodiac_name": "Libra",
+            "color_name": "emerald green"
+        }
+    },
+    {
+        "number": 12,
+        "arcana": "major",
+        "suit":"trump",
+        "name": "Hanged Man",
+        "has": {
+            "energy_name": "elemental",
+            "element_name": "water",
+            "color_name": "deep blue"
+        }
+    },
+    {
+        "number": 13,
+        "arcana": "major",
+        "suit":"trump",
+        "name": "Death",
+        "has": {
+            "energy_name": "zodiacal",
+            "zodiac_name": "Scorpio",
+            "color_name": "green blue"
+        }
+    },
+    {
+        "number": 14,
+        "arcana": "major",
+        "suit":"trump",
+        "name": "Temperance",
+        "has": {
+            "energy_name": "zodiacal",
+            "zodiac_name": "Sagittarius",
+            "color_name": "blue"
+        }
+    },
+    {
+        "number": 15,
+        "arcana": "major",
+        "suit":"trump",
+        "name": "Devil",
+        "has": {
+            "energy_name": "zodiacal",
+            "zodiac_name": "Capricorn",
+            "color_name": "indigo"
+        }
+    },
+    {
+        "number": 16,
+        "arcana": "major",
+        "suit":"trump",
+        "name": "Tower",
+        "has": {
+            "energy_name": "planetary",
+            "planet_name": "Mars",
+            "color_name": "red"
+        }
+    },
+    {
+        "number": 17,
+        "arcana": "major",
+        "suit": "trump",
+        "name": "Star",
+        "has": {
+            "energy_name": "zodiacal",
+            "zodiac_name": "Aquarius",
+            "color_name": "violet"
+        }
+    },
+    {
+        "number": 18,
+        "arcana": "major",
+        "suit":"trump",
+        "name": "Moon",
+        "has": {
+            "energy_name": "zodiacal",
+            "zodiac_name": "Pisces",
+            "color_name": "Crimson"
+        }
+    },
+    {
+        "number": 19,
+        "arcana": "major",
+        "suit":"trump",
+        "name": "Sun",
+        "has": {
+            "energy_name": "planetary",
+            "planet_name": "Sun",
+            "color_name": "orange"
+        }
+    },
+    {
+        "number": 20,
+        "arcana": "major",
+        "suit":"trump",
+        "name": "Judgment",
+        "has": {
+            "energy_name": "elemental",
+            "element_name": "fire",
+            "color_name": "red orange"
+        }
+    },
+    {
+        "number": 21,
+        "arcana": "major",
+        "suit":"trump",
+        "name": "Universe",
+        "has": {
+            "energy_name": "planetary",
+            "planet_name": "Saturn",
+            "color_name": "violet"
+        }
+    },
+    {
+        "number": 1,
+        "arcana": "minor",
+        "suit":"wands",
+        "name": "Ace of Wands",
+        "has": {
+            "energy_name": "elemental",
+            "element_name": "fire",
+            "color_name": "white"
+        }
+    },
+    {
+        "number": 2,
+        "arcana": "minor",
+        "suit":"wands",
+        "name": "Two of Wands",
+        "has": {
+            "energy_name": "elemental",
+            "element_name": "fire",
+            "color_name": "grey"
+        }
+    },
+    {
+        "number": 3,
+        "arcana": "minor",
+        "suit":"wands",
+        "name": "Three of Wands",
+        "title": "Virtue",
+        "has": {
+            "energy_name": "elemental",
+            "element_name": "fire",
+            "color_name": "black"
+        }
+    },
+    {
+        "number": 4,
+        "arcana": "minor",
+        "suit":"wands",
+        "name": "Four of Wands",
+        "has": {
+            "energy_name": "elemental",
+            "element_name": "fire",
+            "color_name": "blue"
+        }
+    },
+    {
+        "number": 5,
+        "arcana": "minor",
+        "suit":"wands",
+        "name": "Five of Wands",
+        "has": {
+            "energy_name": "elemental",
+            "element_name": "fire",
+            "color_name": "red"
+        }
+    },
+    {
+        "number": 6,
+        "arcana": "minor",
+       "suit":"wands",
+        "name": "Six of Wands",
+        "has": {
+            "energy_name": "elemental",
+            "element_name": "fire",
+            "color_name": "yellow"
+        }
+    },
+    {
+        "number": 7,
+        "arcana": "minor",
+        "suit":"wands",
+        "name": "Seven of Wands",
+        "has": {
+            "energy_name": "elemental",
+            "element_name": "fire",
+            "color_name": "green"
+        }
+    },
+    {
+        "number": 8,
+        "arcana": "minor",
+        "suit":"wands",
+        "name": "Eight of Wands",
+        "has": {
+            "energy_name": "elemental",
+            "element_name": "fire",
+            "color_name": "orange"
+        }
+    },
+    {
+        "number": 9,
+        "arcana": "minor",
+        "suit":"wands",
+        "name": "Nine of Wands",
+        "has": {
+            "energy_name": "elemental",
+            "element_name": "fire",
+            "color_name": "purple"
+        }
+    },
+    {
+        "number": 10,
+        "arcana": "minor",
+        "suit":"wands",
+        "name": "Ten of Wands",
+        "has": {
+            "energy_name": "elemental",
+            "element_name": "fire",
+            "color_name": "olive"
+        }
+    },
+    {
+        "number": 11,
+        "arcana": "minor",
+        "suit":"wands",
+        "name": "Page of Wands",
+        "has": {
+            "energy_name": "elemental",
+            "element_name": "fire",
+            "color_name": "olive"
+        }
+    },
+    {
+        "number": 12,
+        "arcana": "minor",
+        "suit":"wands",
+        "name": "Knight of Wands",
+        "has": {
+            "energy_name": "elemental",
+            "element_name": "fire",
+            "color_name": "yellow"
+        }
+    },
+    {
+        "number": 13,
+        "arcana": "minor",
+        "suit":"wands",
+        "name": "Queen of Wands",
+        "has": {
+            "energy_name": "elemental",
+            "element_name": "fire",
+            "color_name": "black"
+        }
+    },
+    {
+        "number": 14,
+        "arcana": "minor",
+        "suit":"wands",
+        "name": "King of Wands",
+        "has": {
+            "energy_name": "elemental",
+            "element_name": "fire",
+            "color_name": "grey"
+        }
+    },
+    {
+        "number": 1,
+        "arcana": "minor",
+        "suit":"cups",
+        "name": "Ace of Cups",
+        "has": {
+            "energy_name": "elemental",
+            "element_name": "water",
+            "color_name": "white"
+        }
+    },
+    {
+        "number": 2,
+        "arcana": "minor",
+        "suit":"cups",
+        "name": "Two of Cups",
+        "has": {
+            "energy_name": "elemental",
+            "element_name": "water",
+            "color_name": "grey"
+        }
+    },
+    {
+        "number": 3,
+        "arcana": "minor",
+        "suit":"cups",
+        "name": "Three of Cups",
+        "has": {
+            "energy_name": "elemental",
+            "element_name": "water",
+            "color_name": "black"
+        }
+    },
+    {
+        "number": 4,
+        "arcana": "minor",
+        "suit":"cups",
+        "name": "Four of Cups",
+        "has": {
+            "energy_name": "elemental",
+            "element_name": "water",
+            "color_name": "blue"
+        }
+    },
+    {
+        "number": 5,
+        "arcana": "minor",
+        "suit":"cups",
+        "name": "Five of Cups",
+        "has": {
+            "energy_name": "elemental",
+            "element_name": "water",
+            "color_name": "red"
+        }
+    },
+    {
+        "number": 6,
+        "arcana": "minor",
+        "suit":"cups",
+        "name": "Six of Cups",
+        "has": {
+            "energy_name": "elemental",
+            "element_name": "water",
+            "color_name": "yellow"
+        }
+    },
+    {
+        "number": 7,
+        "arcana": "minor",
+        "suit":"cups",
+        "name": "Seven of Cups",
+        "has": {
+            "energy_name": "elemental",
+            "element_name": "water",
+            "color_name": "green"
+        }
+    },
+    {
+        "number": 8,
+        "arcana": "minor",
+        "suit":"cups",
+        "name": "Eight of Cups",
+        "has": {
+            "energy_name": "elemental",
+            "element_name": "water",
+            "color_name": "orange"
+        }
+    },
+    {
+        "number": 9,
+        "arcana": "minor",
+        "suit":"cups",
+        "name": "Nine of Cups",
+        "has": {
+            "energy_name": "elemental",
+            "element_name": "water",
+            "color_name": "purple"
+        }
+    },
+    {
+        "number": 10,
+        "arcana": "minor",
+        "suit":"cups",
+        "name": "Ten of Cups",
+        "has": {
+            "energy_name": "elemental",
+            "element_name": "water",
+            "color_name": "olive"
+        }
+    },
+    {
+        "number": 11,
+        "arcana": "minor",
+        "suit":"cups",
+        "name": "Page of Cups",
+        "has": {
+            "energy_name": "elemental",
+            "element_name": "water",
+            "color_name": "olive"
+        }
+    },
+    {
+        "number": 12,
+        "arcana": "minor",
+        "suit":"cups",
+        "name": "Knight of Cups",
+        "has": {
+            "energy_name": "elemental",
+            "element_name": "water",
+            "color_name": "yellow"
+        }
+    },
+    {
+        "number": 13,
+        "arcana": "minor",
+        "suit":"cups",
+        "name": "Queen of Cups",
+        "has": {
+            "energy_name": "elemental",
+            "element_name": "water",
+            "color_name": "black"
+        }
+    },
+    {
+        "number": 14,
+        "arcana": "minor",
+        "suit":"cups",
+        "name": "King of Cups",
+        "has": {
+            "energy_name": "elemental",
+            "element_name": "water",
+            "color_name": "grey"
+        }
+    },
+    {
+        "number": 1,
+        "arcana": "minor",
+        "suit":"swords",
+        "name": "Ace of Swords",
+        "has": {
+            "energy_name": "elemental",
+            "element_name": "air",
+            "color_name": "white"
+        }
+    },
+    {
+        "number": 2,
+        "arcana": "minor",
+        "suit":"swords",
+        "name": "Two of Swords",
+        "has": {
+            "energy_name": "elemental",
+            "element_name": "air",
+            "color_name": "grey"
+        }
+    },
+    {
+        "number": 3,
+        "arcana": "minor",
+        "suit":"swords",
+        "name": "Three of Swords",
+        "has": {
+            "energy_name": "elemental",
+            "element_name": "air",
+            "color_name": "black"
+        }
+    },
+    {
+        "number": 4,
+        "arcana": "minor",
+        "suit":"swords",
+        "name": "Four of Swords",
+        "has": {
+            "energy_name": "elemental",
+            "element_name": "air",
+            "color_name": "blue"
+        }
+    },
+    {
+        "number": 5,
+        "arcana": "minor",
+        "suit":"swords",
+        "name": "Five of Swords",
+        "has": {
+            "energy_name": "elemental",
+            "element_name": "air",
+            "color_name": "red"
+        }
+    },
+    {
+        "number": 6,
+        "arcana": "minor",
+        "suit":"swords",
+        "name": "Six of Swords",
+        "title": "Science",
+        "has": {
+            "energy_name": "elemental",
+            "element_name": "air",
+            "color_name": "yellow"
+        }
+    },
+    {
+        "number": 7,
+        "arcana": "minor",
+        "suit":"swords",
+        "name": "Seven of Swords",
+        "title_name": "Futility",
+        "has": {
+            "energy_name": "elemental",
+            "element_name": "air",
+            "color_name": "green"
+        }
+    },
+    {
+        "number": 8,
+        "arcana": "minor",
+        "suit":"swords",
+        "name": "Eight of Swords",
+        "title": "Interference",
+        "has": {
+            "energy_name": "elemental",
+            "element_name": "air",
+            "color_name": "orange"
+        }
+    },
+    {
+        "number": 9,
+        "arcana": "minor",
+        "suit":"swords",
+        "name": "Nine of Swords",
+        "has": {
+            "energy_name": "elemental",
+            "element_name": "air",
+            "color_name": "purple"
+        }
+    },
+    {
+        "number": 10,
+        "arcana": "minor",
+        "suit":"swords",
+        "name": "Ten of Swords",
+        "has": {
+            "energy_name": "elemental",
+            "element_name": "air",
+            "color_name": "olive"
+        }
+    },
+    {
+        "number": 11,
+        "arcana": "minor",
+        "suit":"swords",
+        "name": "Page of Swords",
+        "has": {
+            "energy_name": "elemental",
+            "element_name": "air",
+            "color_name": "olive"
+        }
+    },
+    {
+        "number": 12,
+        "arcana": "minor",
+        "suit":"swords",
+        "name": "Knight of Swords",
+        "has": {
+            "energy_name": "elemental",
+            "element_name": "air",
+            "color_name": "yellow"
+        }
+    },
+    {
+        "number": 13,
+        "arcana": "minor",
+        "suit":"swords",
+        "name": "Queen of Swords",
+        "has": {
+            "energy_name": "elemental",
+            "element_name": "air",
+            "color_name": "black"
+        }
+    },
+    {
+        "number": 14,
+        "arcana": "minor",
+        "suit":"swords",
+        "name": "King of Swords",
+        "has": {
+            "energy_name": "elemental",
+            "element_name": "air",
+            "color_name": "grey"
+        }
+    },
+    {
+        "number": 1,
+        "arcana": "minor",
+        "suit":"coins",
+        "name": "Ace of Coins",
+        "has": {
+            "energy_name": "elemental",
+            "element_name": "earth",
+            "color_name": "white"
+        }
+    },
+    {
+        "number": 2,
+        "arcana": "minor",
+        "suit":"coins",
+        "name": "Two of Coins",
+        "has": {
+            "energy_name": "elemental",
+            "element_name": "earth",
+            "color_name": "grey"
+        }
+    },
+    {
+        "number": 3,
+        "arcana": "minor",
+        "suit":"coins",
+        "name": "Three of Coins",
+        "title": "Works",
+        "has": {
+            "energy_name": "elemental",
+            "element_name": "earth",
+            "color_name": "black"
+        }
+    },
+    {
+        "number": 4,
+        "arcana": "minor",
+        "suit":"coins",
+        "name": "Four of Coins",
+        "has": {
+            "energy_name": "elemental",
+            "element_name": "earth",
+            "color_name": "blue"
+        }
+    },
+    {
+        "number": 5,
+        "arcana": "minor",
+        "suit":"coins",
+        "name": "Five of Coins",
+        "has": {
+            "energy_name": "elemental",
+            "element_name": "earth",
+            "color_name": "red"
+        }
+    },
+    {
+        "number": 6,
+        "arcana": "minor",
+        "suit":"coins",
+        "name": "Six of Coins",
+        "has": {
+            "energy_name": "elemental",
+            "element_name": "earth",
+            "color_name": "yellow"
+        }
+    },
+    {
+        "number": 7,
+        "arcana": "minor",
+        "suit":"coins",
+        "name": "Seven of Coins",
+        "title": "Assesment",
+        "has": {
+            "energy_name": "elemental",
+            "element_name": "earth",
+            "color_name": "green"
+        }
+    },
+    {
+        "number": 8,
+        "arcana": "minor",
+        "suit":"coins",
+        "name": "Eight of Coins",
+        "has": {
+            "energy_name": "elemental",
+            "element_name": "earth",
+            "color_name": "orange"
+        }
+    },
+    {
+        "number": 9,
+        "arcana": "minor",
+        "suit":"coins",
+        "name": "Nine of Coins",
+        "has": {
+            "energy_name": "elemental",
+            "element_name": "earth",
+            "color_name": "purple"
+        }
+    },
+    {
+        "number": 10,
+        "arcana": "minor",
+        "suit":"coins",
+        "name": "Ten of Coins",
+        "has": {
+            "energy_name": "elemental",
+            "element_name": "earth",
+            "color_name": "olive"
+        }
+    },
+    {
+        "number": 11,
+        "arcana": "minor",
+        "suit":"coins",
+        "name": "Page of Coins",
+        "has": {
+            "energy_name": "elemental",
+            "element_name": "earth",
+            "color_name": "olive"
+        }
+    },
+    {
+        "number": 12,
+        "arcana": "minor",
+        "suit":"coins",
+        "name": "Knight of Coins",
+        "has": {
+            "energy_name": "elemental",
+            "element_name": "earth",
+            "color_name": "yellow"
+        }
+    },
+    {
+        "number": 13,
+        "arcana": "minor",
+        "suit":"coins",
+        "name": "Queen of Coins",
+        "has": {
+            "energy_name": "elemental",
+            "element_name": "earth",
+            "color_name": "black"
+        }
+    },
+    {
+        "number": 14,
+        "arcana": "minor",
+        "suit":"coins",
+        "name": "King of Coins",
+        "has": {
+            "energy_name": "elemental",
+            "element_name": "earth",
+            "color_name": "grey"
+        }
+    }
+]

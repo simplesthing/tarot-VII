@@ -192,6 +192,22 @@ body, html {
   footer {
     display: none; } }
 
+.shuffle {
+  text-align: center;
+  margin-top: 5%; }
+  .shuffle .instructions {
+    font-family: Verdana, Geneva, sans-serif;
+    font-weight: 100; }
+
+div[class^='card'] {
+  width: 9vmin;
+  height: 18vmin;
+  position: absolute;
+  background: url(../../images/tarot/smith-waite-tarot.webp) 0 0 no-repeat;
+  background-size: 9vmin 18vmin;
+  border: solid 1px #000;
+  border-radius: 7px; }
+
 .popup {
   position: absolute; }
   .popup .popup__content {

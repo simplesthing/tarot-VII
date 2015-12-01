@@ -12,6 +12,12 @@ define(function (require) {
         element = element.offsetParent;
       }
       return { x: xPosition, y: yPosition };
+    },
+    iterateNodes: function iterateNodes(nodes, callback, scope) {
+      for (var i = 0; i < nodes.length; i++) {
+        callback.call(scope, i, nodes[i]);
+      }
     }
+
   };
 });
