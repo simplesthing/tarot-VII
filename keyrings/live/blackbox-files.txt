@@ -50,7 +50,6 @@ app/images/tarot/trump/16.jpg
 app/images/tarot/trump/17.jpg
 app/images/tarot/trump/18.jpg
 app/images/tarot/trump/19.jpg
-app/images/tarot/trump/2.jpg
 app/images/tarot/trump/20.jpg
 app/images/tarot/trump/21.jpg
 app/images/tarot/trump/3.jpg
