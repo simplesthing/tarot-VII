@@ -60,12 +60,13 @@ define(function(require){
       });
       // cut _cards.data
       cutCardData(cut);
+      updateInstructions();
       setTimeout(stackCut, 500, top, bottom);
     }
 
     function lineUpCards(index, value){
       let marginLeft = ((window.innerWidth/78))/2;
-      value.style.top = '10%';
+      value.style.top = '20%';
       value.style.left = index *1 + '%';
       value.style.transform = 'rotate(0deg)';
       value.style.marginLeft = Math.round(marginLeft) + '%';
@@ -87,12 +88,13 @@ define(function(require){
             value.classList.add('reverse');
           }
         }
+
         value.addEventListener('click', cutCards, false);
       });
     }
 
     function randomPosition(){
-      return Math.floor(Math.random() * 90);
+      return Math.floor(Math.random() * 80);
     }
 
     function rotation(){
@@ -120,7 +122,7 @@ define(function(require){
       // shuffle cards in DOM
       helper.iterateNodes(cards, function(index, value){
         value.style.left = randomPosition() + '%';
-        value.style.top = randomPosition() + '%';
+        value.style.top = (randomPosition() + 12) + '%';
         value.style.transform = 'rotate('+rotation()+'deg)';
       });
       // shuffle _cards.data
@@ -128,11 +130,24 @@ define(function(require){
       setTimeout(shuffleCards, 600, n-1);
     }
 
+    function updateInstructions (){
+      let instructions = document.querySelector('.instructions'),
+          remainingCuts = 3 - cuts,
+          times = remainingCuts > 1 ? 'times': 'more time';
+
+      if(cuts < 3) {
+        instructions.innerHTML = 'You must cut the cards ' + remainingCuts +' '+ times +'. <br> Click the cards where you want the deck to be cut.';
+      } else {
+        instructions.remove();
+      }
+    }
+
     function startShuffle(evt){
       evt.preventDefault();
       evt.stopPropagation();
       let page = document.querySelector('.page'),
           numCards = _cards.data.length,
+          instructions = document.createElement('h1'),
           cards;
       // clear page container
       while(page.firstChild) {
@@ -141,6 +156,10 @@ define(function(require){
       // reclass page container for shuffle layout
       page.classList.remove('home');
       page.classList.add('shuffle');
+      // add instructions to cut deck
+      instructions.classList.add('instructions');
+      page.appendChild(instructions);
+      updateInstructions();
       // add cards to DOM
       for(var i = 0; i < numCards; i++){
         var card = document.createElement('div');
@@ -157,7 +176,6 @@ define(function(require){
       // shuffle 3 times
       setTimeout(shuffleCards, 200, 3);
     }
-
     // click deck to start
     deck.addEventListener('click', startShuffle, false);
 
