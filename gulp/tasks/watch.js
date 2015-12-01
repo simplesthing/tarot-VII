@@ -23,7 +23,18 @@ gulp.task('watch:index', function(){
   gulp.watch([config.index], ['html']);
 });
 
+gulp.task('watch:images', function(){
+  config.log('watching images');
+
+  gulp.watch([config.images], ['images']);
+});
+
+gulp.task('watch:json', function(){
+  config.log('watching json');
+
+  gulp.watch([config.json], ['json']);
+});
 
 
 
-gulp.task('watch', ['watch:appjs', 'watch:sass','watch:index']);
+gulp.task('watch', ['watch:appjs', 'watch:sass','watch:index','watch:images', 'watch:json']);

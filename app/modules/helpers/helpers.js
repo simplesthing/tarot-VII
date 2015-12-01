@@ -12,6 +12,12 @@ define(function(require){
     }
     return { x: xPosition, y: yPosition };
 
+    },
+    iterateNodes: function(nodes, callback, scope){
+      for(var i = 0; i < nodes.length; i++){
+        callback.call(scope, i, nodes[i]);
+      }
     }
+
   };
 });

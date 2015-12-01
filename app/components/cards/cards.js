@@ -1,7 +1,7 @@
 'use strict';
 
 define(function(require){
-  var popup = require('../modules/popup/popup');
+  var popup = require('../../modules/popup/popup');
 
   var Cards = function(){
 		var model = {};
@@ -54,7 +54,7 @@ define(function(require){
 
 		init('models/cards.json', function(data){
 			model.cards = data;
-			model.addCardsToDOM('cards');
+			// model.addCardsToDOM('cards');
 		});
 
 		return model;
