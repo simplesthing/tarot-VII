@@ -18,13 +18,13 @@ define(function(require){
 			httpRequest.send();
 		};
 
-		model.handleCardClick = function(evt){
+		model.addPopup = function(evt){
 			evt.preventDefault();
 			evt.stopPropagation();
       popup.addPU(evt.target.id);
 		};
 
-		model.addCardsToDOM = function(container){
+		model.addCardsToDOMByArcana = function(container){
 			var _container,arcana, suit;
 			_container = document.querySelector('#'+container);
 
@@ -53,13 +53,13 @@ define(function(require){
 		};
 
 		init('models/cards.json', function(data){
-			model.cards = data;
+			model.data = data;
 			// model.addCardsToDOM('cards');
 		});
 
 		return model;
 	};
 
-	var cards = new Cards(); //jshint ignore:line
+	return new Cards(); //jshint ignore:line
 
 });

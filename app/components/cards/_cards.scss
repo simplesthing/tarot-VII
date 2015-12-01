@@ -1,11 +1,10 @@
-.card {
+div[class^='card'] {
       width:9vmin;
       height:18vmin;
       position: absolute;
       // TODO add modernizr support for bg images webp
       background: url(../../images/tarot/smith-waite-tarot.webp) 0 0 no-repeat;
       background-size: 9vmin 18vmin;
-      // background:#ccc;
       border:solid 1px #000;
       border-radius: 7px;
     }
