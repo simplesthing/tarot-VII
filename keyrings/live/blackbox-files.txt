@@ -3,7 +3,6 @@ app/images/tarot/cups/11.jpg
 app/images/tarot/cups/12.jpg
 app/images/tarot/cups/13.jpg
 app/images/tarot/cups/14.jpg
-app/images/tarot/cups/2.jpg
 app/images/tarot/cups/3.jpg
 app/images/tarot/cups/4.jpg
 app/images/tarot/cups/5.jpg
