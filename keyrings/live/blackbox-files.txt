@@ -40,7 +40,6 @@ app/images/tarot/swords/6.jpg
 app/images/tarot/swords/7.jpg
 app/images/tarot/swords/8.jpg
 app/images/tarot/swords/9.jpg
-app/images/tarot/trump/9.jpg
 app/images/tarot/wands/1.jpg
 app/images/tarot/wands/10.jpg
 app/images/tarot/wands/11.jpg
