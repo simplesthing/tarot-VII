@@ -40,7 +40,6 @@ app/images/tarot/swords/6.jpg
 app/images/tarot/swords/7.jpg
 app/images/tarot/swords/8.jpg
 app/images/tarot/swords/9.jpg
-app/images/tarot/wands/12.jpg
 app/images/tarot/wands/13.jpg
 app/images/tarot/wands/14.jpg
 app/models/cards.json
