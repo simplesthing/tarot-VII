@@ -12,7 +12,10 @@ body, html {
   height:100%;
 }
 
-
+ h1 {
+  font-family: Verdana, Geneva, sans-serif;
+  font-weight: 100;
+}
 
 /* Small viewport ----------- */
 @media only screen  and (min-width : 420px) {

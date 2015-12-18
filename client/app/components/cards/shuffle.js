@@ -3,6 +3,7 @@
 define(function(require){
   var helper = require('../../modules/helpers/helpers');
   var _cards = require('./cards');
+  var dealer = require('./deal');
 
   var Shuffle = function(){
     let model = {},
@@ -22,7 +23,12 @@ define(function(require){
       if(cuts < 3) {
         setTimeout(shuffleCards, 500, 3);
       } else {
-        // TODO Deal cards
+        let cards = document.querySelectorAll('.card');
+        helper.iterateNodes(cards, function(index, value){
+          value.removeEventListener('click', cutCards);
+        });
+
+        dealer.setupSpread();
       }
     }
 
@@ -36,14 +42,12 @@ define(function(require){
       evt.preventDefault();
       evt.stopPropagation();
       cuts++;
-      // console.log(evt.target.dataset.index);
       let cards = document.querySelectorAll('.card'),
           cut = evt.target.dataset.index,
           topStack = helper.getPosition(cards[cards.length -10]),
           bottomStack = helper.getPosition(cards[10]),
           bottom = [],
           top = [];
-      console.log(_cards.data[cut]);
       // cut cards into top and bottom stacks
       helper.iterateNodes(cards, function(index, value){
         if(index < cut) {
