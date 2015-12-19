@@ -1,11 +1,21 @@
-var http = require('http');
 
-http.createServer(function(request, response){
+var express = require('express');
+var bodyParser = require('body-parser');
 
-  response.writeHead({
-    'Content-Type': 'text/plain'
+var app = express();
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+
+
+app.get('/', function(request, response){
+  response.send({foo: 'hello world'});
+});
+
+app.post('/doStuff', function(request, response){
+  var foo = request.param('foo');
+  response.send({
+    param: foo
   });
-  response.end('hekki world');
+});
 
-}).listen(3000);
-
+app.listen(3000);

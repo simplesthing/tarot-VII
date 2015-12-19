@@ -1,0 +1,24 @@
+{
+  "name": "tarot-vii",
+  "version": "1.0.0",
+  "description": "API and server for tarot-vii app",
+  "main": "api.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/simplesthing/tarot-VII.git"
+  },
+  "author": "Ava Collins",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/simplesthing/tarot-VII/issues"
+  },
+  "homepage": "https://github.com/simplesthing/tarot-VII#readme",
+  "dependencies": {
+    "body-parser": "^1.14.2",
+    "express": "^4.13.3"
+  }
+}

@@ -9,7 +9,7 @@ function serveCallback() {
   browserSync.instance = browserSync.init({
       startPath: '/',
       notify  : false,
-      port    : 3000,
+      port    : 8000,
       server: {
         baseDir    : ['build', './']
       }
