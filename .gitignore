@@ -2,20 +2,20 @@
 /data
 /design
 
-#blackbox
-*.swp
-/keyrings/live/pubring.gpg~
-/keyrings/live/pubring.kbx~
-/keyrings/live/secring.gpg
-
-#client
+#client/
 client/deploy.sh
 client/node_modules
 client/bower_components
 client/build
 client/dist
 
-#server
+#server/
 server/node_modules
 
+#blackbox
+*.swp
+/keyrings/live/pubring.gpg~
+/keyrings/live/pubring.kbx~
+/keyrings/live/secring.gpg
 
+/data/models/cards.json

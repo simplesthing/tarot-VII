@@ -19,6 +19,8 @@
   "homepage": "https://github.com/simplesthing/tarot-VII#readme",
   "dependencies": {
     "body-parser": "^1.14.2",
-    "express": "^4.13.3"
+    "express": "^4.13.3",
+    "mongodb": "^2.0.52",
+    "mongoose": "^4.3.3"
   }
 }
