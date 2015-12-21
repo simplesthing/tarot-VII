@@ -3,24 +3,20 @@
  */
 
 var mongoose = require('mongoose');
-var cardSchema = require('../db/schemas/card')
-var Card = mongoose.model('Card', cardSchema);
+var Card = mongoose.model('Card');
 
+
+var newCard = new Card({
+  name:'Fool'
+})
+
+newCard.save( function( err, card ){
+  if(!err){
+    console.log('Card saved! ' + card.name);
+  }
+});
 
 //GET
 exports.index = function(request, response){
   response.send('cards');
-  console.log(Cards)
-};
-//POST
-exports.new = function(request, response){
-  response.send('new');
-};
-//PUT
-exports.update = function(request, response){
-  response.send('update');
-};
-//DELETE
-exports.delete = function(request, response){
-  response.send('delete');
 };

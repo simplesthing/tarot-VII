@@ -8,6 +8,7 @@
 
 var mongoose = require('mongoose');
 
+
 var CardSchema = new mongoose.Schema({
   number: Number,
   name: String,
@@ -15,3 +16,4 @@ var CardSchema = new mongoose.Schema({
   has: Array
 });
 
+mongoose.model('Card', CardSchema);
