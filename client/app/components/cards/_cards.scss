@@ -1,13 +1,22 @@
-div[class^='card'] {
-      width:9vmin;
-      height:18vmin;
-      position: absolute;
-      // TODO add modernizr support for bg images webp
-      background: url(../../images/tarot/smith-waite-tarot.webp) 0 0 no-repeat;
-      background-size: 9vmin 18vmin;
-      border:solid 1px #000;
-      border-radius: 7px;
-    }
+.card {
+  width:9vmin;
+  height:18vmin;
+  position: absolute;
+  border:solid 1px #000;
+  border-radius: 7px;
+  &.card--back {
+    // TODO add modernizr support for bg images webp
+    background: url(../../images/tarot/smith-waite-tarot.webp) 0 0 no-repeat;
+    background-size: 9vmin 18vmin;
+  }
+  &.card--placeholder {
+    background: rgba(255,255,255,.5);
+    border-color: transparent;
+  }
+  .card--face {
+
+  }
+}
 
 .popup {
   position:absolute;

@@ -2,14 +2,14 @@
 
 define(function(require){
   var helper = require('../../modules/helpers/helpers');
-  var _cards = require('./cards');
-  var dealer = require('./deal');
+  var _cards = require('../cards/cards');
+  var dealer = require('../deal/deal');
 
   var Shuffle = function(){
-    let model = {},
+      let model = {},
         deck = document.querySelector('.deck'),
         cuts = 0;
-
+    //STACK DECK
     function stackCut(top, bottom){
       let marginLeft = ((window.innerWidth/78))/2;
       top.forEach(function(card){
@@ -28,16 +28,16 @@ define(function(require){
           value.removeEventListener('click', cutCards);
         });
 
-        dealer.setupSpread();
+        dealer.setupSpread(_cards);
       }
     }
-
+    //SPLIT AND CONCAT CARDS ARRAY AT CUT
     function cutCardData(index){
       let bottom = _cards.data.slice(0,index),
           top = _cards.data.slice(index, _cards.data.length).reverse();
       _cards.data = top.concat(bottom);
     }
-
+    //CUT CARDS
     function cutCards(evt){
       evt.preventDefault();
       evt.stopPropagation();
@@ -67,7 +67,7 @@ define(function(require){
       updateInstructions();
       setTimeout(stackCut, 500, top, bottom);
     }
-
+    //LINE CARDS UP
     function lineUpCards(index, value){
       let marginLeft = ((window.innerWidth/78))/2;
       value.style.top = '20%';
@@ -75,7 +75,7 @@ define(function(require){
       value.style.transform = 'rotate(0deg)';
       value.style.marginLeft = Math.round(marginLeft) + '%';
     }
-
+    //SPREAD CARDS FOR CUT
     function setupCut(cards){
       helper.iterateNodes(cards, function(index, value){
         let transform = value.style.transform,
@@ -104,7 +104,7 @@ define(function(require){
     function rotation(){
       return Math.floor(Math.random() * 360);
     }
-
+    //SHUFFLE CARDS ARRAY
     // Fisher-Yates shuffle - http://bost.ocks.org/mike/shuffle/
     function shuffleCardData(){
       let numCards = _cards.data.length,
@@ -116,7 +116,7 @@ define(function(require){
         _cards.data[pick] = swap;
       }
     }
-
+    //SHUFFLE
     function shuffleCards(n){
       var cards = document.querySelectorAll('.card');
       if(n === 0){
@@ -133,7 +133,7 @@ define(function(require){
       shuffleCardData();
       setTimeout(shuffleCards, 600, n-1);
     }
-
+    //INSTRUCTIONS
     function updateInstructions (){
       let instructions = document.querySelector('.instructions'),
           remainingCuts = 3 - cuts,
@@ -145,7 +145,7 @@ define(function(require){
         instructions.remove();
       }
     }
-
+    // START
     function startShuffle(evt){
       evt.preventDefault();
       evt.stopPropagation();
@@ -157,28 +157,30 @@ define(function(require){
       while(page.firstChild) {
         page.removeChild(page.firstChild);
       }
-      // reclass page container for shuffle layout
+      //// reclass page container for shuffle layout
       page.classList.remove('home');
-      page.classList.add('shuffle');
-      // add instructions to cut deck
-      instructions.classList.add('instructions');
-      page.appendChild(instructions);
-      updateInstructions();
-      // add cards to DOM
-      for(var i = 0; i < numCards; i++){
-        var card = document.createElement('div');
-        card.classList.add('card');
-        card.dataset.index = i;
-        page.appendChild(card);
-        card.style.transition = 'all 0.5s ease';
-      }
-      // line cards up
-      cards = document.querySelectorAll('.card');
-      helper.iterateNodes(cards, function(index, value){
-         lineUpCards(0, value);
-      });
-      // shuffle 3 times
-      setTimeout(shuffleCards, 200, 3);
+      //page.classList.add('shuffle');
+      //// add instructions to cut deck
+      //instructions.classList.add('instructions');
+      //page.appendChild(instructions);
+      //updateInstructions();
+      //// add cards to DOM
+      //for(var i = 0; i < numCards; i++){
+      //  var card = document.createElement('div');
+      //  card.classList.add('card');
+      //  card.classList.add('card--back');
+      //  card.dataset.index = i;
+      //  page.appendChild(card);
+      //  card.style.transition = 'all 0.5s ease';
+      //}
+      //// line cards up
+      //cards = document.querySelectorAll('.card');
+      //helper.iterateNodes(cards, function(index, value){
+      //   lineUpCards(0, value);
+      //});
+      //// shuffle 3 times
+      //setTimeout(shuffleCards, 200, 3);
+      dealer.setupSpread(_cards);
     }
     // click deck to start
     deck.addEventListener('click', startShuffle, false);

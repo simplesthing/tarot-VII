@@ -1,0 +1,59 @@
+.deal{
+  //text-align: center;
+  //margin-top: 5%;
+  .instructions {
+    margin:5% 0 0 5%;
+    font-family: Verdana, Geneva, sans-serif;
+    font-weight: 100;
+  }
+
+  .situation {
+    top:45%;
+    left:25%;
+  }
+
+  .obstacle {
+    top:45%;
+    left:25%;
+    transform: rotate(90deg);
+  }
+
+  .root {
+    top:70%;
+    left:25%;
+  }
+
+  .crown {
+    top:20%;
+    left:25%;
+  }
+
+  .behind {
+    top:45%;
+    left:10%;
+  }
+
+  .ahead {
+    top:45%;
+    left:40%;
+  }
+  .self {
+    top:75%;
+    left:50%;
+  }
+
+  .influences {
+    top:55%;
+    left:50%;
+  }
+
+  .hope-fear {
+    top:35%;
+    left:50%;
+  }
+
+  .outcome {
+    top:15%;
+    left:50%;
+  }
+}

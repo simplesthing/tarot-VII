@@ -5,18 +5,14 @@
 var mongoose = require('mongoose');
 var Card = mongoose.model('Card');
 
-
-var newCard = new Card({
-  name:'Fool'
-})
-
-newCard.save( function( err, card ){
-  if(!err){
-    console.log('Card saved! ' + card.name);
-  }
-});
-
 //GET
 exports.index = function(request, response){
-  response.send('cards');
+  var allCards = Card.find({});
+  allCards.exec(function(err, cards){
+    if(!err){
+      response.send(cards);
+    }
+  });
+
+
 };

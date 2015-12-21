@@ -4,6 +4,7 @@ var bodyParser = require('body-parser');
 var config = require('./lib/config/config');
 var path = require('path');
 var fs = require('fs');
+var cors = require('cors');
 
 //Connect to DB
 var db = require('./lib/db/db').db;
@@ -14,8 +15,15 @@ fs.readdirSync(modelsPath).forEach(function (file) {
   require(modelsPath + '/' + file);
 });
 
+var corsOptions = {
+  origin: 'http://localhost:8000/'
+};
+
+app.use(cors());
+
 //Load Routes
 require('./lib/config/routes')(app);
+
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));

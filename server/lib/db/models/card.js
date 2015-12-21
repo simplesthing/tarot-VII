@@ -17,3 +17,5 @@ var CardSchema = new mongoose.Schema({
 });
 
 mongoose.model('Card', CardSchema);
+
+
