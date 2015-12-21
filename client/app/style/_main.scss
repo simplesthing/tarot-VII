@@ -1,12 +1,13 @@
 /* Smallest viewport ----------- */
+$background-gradient: linear-gradient(180deg, $gray-light 70%, $gray-dark);
 body, html {
   width:100%;
   height:100%;
   margin:0;
   font-size:4.5vw;
-  //background:$black;
-  background: linear-gradient(180deg, #c3c4c7 70%, #929396);
+  background:$background-gradient;
 }
+
 
 .page {
   width:100%;

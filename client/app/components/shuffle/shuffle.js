@@ -14,7 +14,7 @@ define(function(require){
       let marginLeft = ((window.innerWidth/78))/2;
       top.forEach(function(card){
         card.style.left = '0%';
-        card.style.marginLeft = Math.round(marginLeft) + '%';
+        //card.style.marginLeft = Math.round(marginLeft) + '%';
       });
       bottom.forEach(function(card){
         card.style.left = '0%';
@@ -165,14 +165,16 @@ define(function(require){
       //page.appendChild(instructions);
       //updateInstructions();
       //// add cards to DOM
+      //var spread = document.createElement('div);
       //for(var i = 0; i < numCards; i++){
       //  var card = document.createElement('div');
       //  card.classList.add('card');
       //  card.classList.add('card--back');
       //  card.dataset.index = i;
-      //  page.appendChild(card);
+      //  spread.appendChild(card);
       //  card.style.transition = 'all 0.5s ease';
       //}
+      //page.appendChild(spread);
       //// line cards up
       //cards = document.querySelectorAll('.card');
       //helper.iterateNodes(cards, function(index, value){
