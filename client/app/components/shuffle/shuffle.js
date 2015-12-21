@@ -4,10 +4,10 @@ define(function(require){
   var helper = require('../../modules/helpers/helpers');
   var _cards = require('../cards/cards');
   var dealer = require('../deal/deal');
+  var deck = document.querySelector('.deck');
 
   var Shuffle = function(){
       let model = {},
-        deck = document.querySelector('.deck'),
         cuts = 0;
     //STACK DECK
     function stackCut(top, bottom){
@@ -183,7 +183,7 @@ define(function(require){
       dealer.setupSpread(_cards);
     }
     // click deck to start
-    deck.addEventListener('click', startShuffle, false);
+    //deck.addEventListener('click', startShuffle, false);
 
     return model;
   };

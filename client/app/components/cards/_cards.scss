@@ -1,3 +1,6 @@
+// #f0ebda;
+$card-glow :   0px 0px 100px 25px #fff;
+
 .card {
   width:9vmin;
   height:18vmin;
@@ -10,11 +13,14 @@
     background-size: 9vmin 18vmin;
   }
   &.card--placeholder {
-    background: rgba(255,255,255,.5);
-    border-color: transparent;
+    background: rgba(255,255,255, .5);
+    border-color:transparent;
   }
-  .card--face {
-
+  &.card--face {
+    box-shadow: $card-glow;
+    &.obstacle {
+      border:none;
+    }
   }
 }
 

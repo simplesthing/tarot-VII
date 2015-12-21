@@ -4,7 +4,8 @@ body, html {
   height:100%;
   margin:0;
   font-size:4.5vw;
-  background:$gray-light;
+  //background:$black;
+  background: linear-gradient(180deg, #c3c4c7 70%, #929396);
 }
 
 .page {
@@ -13,7 +14,7 @@ body, html {
 }
 
  h1 {
-  font-family: Verdana, Geneva, sans-serif;
+  //font-family: Verdana, Geneva, sans-serif;
   font-weight: 100;
 }
 

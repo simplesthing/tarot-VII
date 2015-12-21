@@ -11,32 +11,87 @@
   <script src="../node_modules/requirejs/require.js" data-main="app"></script>
 </head>
 <body>
-  <div class="page home">
+  <div class="page deal">
 
-    <main class="start">
-      <h1>Click tarot card to start
-        <picture>
-          <source type="image/webp" srcset="images/arrows/1.webp" />
-          <img src="images/arrows/1.png" alt="Arrow pointing to card" class="arrow">
-        </picture>
-      </h1>
+    <div class="card card--back" data-index="0" style="transition: all 0.5s ease; top: 12%; left: 0%; transform: rotate(0deg); margin-left: 8%;"></div>
+    <h1 class="instructions">Click deck to deal</h1>
 
-      <picture>
-        <source type="image/webp" srcset="images/tarot/smith-waite-tarot.webp"/>
-        <img src="images/tarot/smith-waite-tarot.jpg" alt="Card, click to start" class="deck">
-      </picture>
-    </main>
+    <section class="spread">
+      <!--<div class="card card&#45;&#45;face situation" style="background:url(images/tarot/coins/8.png) center center no-repeat; background-size: 9vmin 19vmin;"></div>-->
+      <!--<div class="card card&#45;&#45;placeholder obstacle"></div>-->
 
-    <footer>
-        <div class="tag">
-        <i class="icon tetractys"></i>
-        <h1>TAROTJS</h1>
-        <p>Lorem ipsum sonat</p>
-        <i class="icon tree-of-life"></i>
+      <div class="card card--face obstacle">
+        <div class="mask card" style="background:transparent url(images/tarot/coins/1.png) no-repeat; background-size: 9vmin 19vmin;">
+          <div  class="card" style="background:transparent url(images/tarot/coins/1.png) bottom center no-repeat; background-size: 9vmin 19vmin;"></div>
+        </div>
+        <div class="face card" style="background:url(images/tarot/coins/8.png) center center no-repeat; background-size: 9vmin 19vmin;"></div>
       </div>
-    </footer>
+      <div class="card card--face root" style="background:url(images/tarot/coins/11.png) center center no-repeat; background-size: 9vmin 19vmin;"></div>
+      <!--<div class="card card&#45;&#45;placeholder root"></div>-->
+      <div class="card card--face crown" style="background:url(images/tarot/coins/11.png) center center no-repeat; background-size: 9vmin 19vmin;"></div>
+      <div class="card card--face behind" style="background:url(images/tarot/coins/11.png) center center no-repeat; background-size: 9vmin 19vmin;"></div>
+      <div class="card card--face ahead" style="background:url(images/tarot/coins/11.png) center center no-repeat; background-size: 9vmin 19vmin;"></div>
+      <div class="card card--face self" style="background:url(images/tarot/coins/11.png) center center no-repeat; background-size: 9vmin 19vmin;"></div>
+      <div class="card card--face influences" style="background:url(images/tarot/coins/11.png) center center no-repeat; background-size: 9vmin 19vmin;"></div>
+      <div class="card card--face hope-fear" style="background:url(images/tarot/coins/11.png) center center no-repeat; background-size: 9vmin 19vmin;"></div>
+      <div class="card card--face outcome" style="background:url(images/tarot/coins/11.png) center center no-repeat; background-size: 9vmin 19vmin;"></div>
+    </section>
+
+    <section class="reading">
+      <ul>
+        <li class="position">
+          <h1>Outcome</h1>
+          <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec in tincidunt ante, eu aliquam ipsum. Nulla luctus tortor et elit mollis auctor.</h2>
+          <p>Morbi commodo pretium orci, eu cursus lacus lacinia quis. In posuere turpis in ligula imperdiet imperdiet. Nunc tristique porta lectus id ultrices. Sed pharetra ultrices quam. Aliquam metus magna, sagittis pulvinar suscipit vel, feugiat sed quam. Etiam nec tempor ipsum. Maecenas convallis varius nibh at ornare. Vivamus efficitur sollicitudin est vitae aliquam. Donec sed eros rhoncus, scelerisque ipsum at, fermentum massa. Morbi aliquam nec ex faucibus porta. Nunc dolor magna, vestibulum sed lobortis ut, dignissim ut mi.</p>
+        </li>
+        <li class="position">
+          <h1>Hope &amp; fear</h1>
+          <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec in tincidunt ante, eu aliquam ipsum. Nulla luctus tortor et elit mollis auctor.</h2>
+          <p>Morbi commodo pretium orci, eu cursus lacus lacinia quis. In posuere turpis in ligula imperdiet imperdiet. Nunc tristique porta lectus id ultrices. Sed pharetra ultrices quam. Aliquam metus magna, sagittis pulvinar suscipit vel, feugiat sed quam. Etiam nec tempor ipsum. Maecenas convallis varius nibh at ornare. Vivamus efficitur sollicitudin est vitae aliquam. Donec sed eros rhoncus, scelerisque ipsum at, fermentum massa. Morbi aliquam nec ex faucibus porta. Nunc dolor magna, vestibulum sed lobortis ut, dignissim ut mi.</p>
+        </li>
+        <li class="position">
+          <h1>Environment</h1>
+          <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec in tincidunt ante, eu aliquam ipsum. Nulla luctus tortor et elit mollis auctor.</h2>
+          <p>Morbi commodo pretium orci, eu cursus lacus lacinia quis. In posuere turpis in ligula imperdiet imperdiet. Nunc tristique porta lectus id ultrices. Sed pharetra ultrices quam. Aliquam metus magna, sagittis pulvinar suscipit vel, feugiat sed quam. Etiam nec tempor ipsum. Maecenas convallis varius nibh at ornare. Vivamus efficitur sollicitudin est vitae aliquam. Donec sed eros rhoncus, scelerisque ipsum at, fermentum massa. Morbi aliquam nec ex faucibus porta. Nunc dolor magna, vestibulum sed lobortis ut, dignissim ut mi.</p>
+        </li>
+        <li class="position">
+          <h1>Perspective</h1>
+          <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec in tincidunt ante, eu aliquam ipsum. Nulla luctus tortor et elit mollis auctor.</h2>
+          <p>Morbi commodo pretium orci, eu cursus lacus lacinia quis. In posuere turpis in ligula imperdiet imperdiet. Nunc tristique porta lectus id ultrices. Sed pharetra ultrices quam. Aliquam metus magna, sagittis pulvinar suscipit vel, feugiat sed quam. Etiam nec tempor ipsum. Maecenas convallis varius nibh at ornare. Vivamus efficitur sollicitudin est vitae aliquam. Donec sed eros rhoncus, scelerisque ipsum at, fermentum massa. Morbi aliquam nec ex faucibus porta. Nunc dolor magna, vestibulum sed lobortis ut, dignissim ut mi.</p>
+        </li>
+        <li class="position">
+          <h1>Ahead</h1>
+          <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec in tincidunt ante, eu aliquam ipsum. Nulla luctus tortor et elit mollis auctor.</h2>
+          <p>Morbi commodo pretium orci, eu cursus lacus lacinia quis. In posuere turpis in ligula imperdiet imperdiet. Nunc tristique porta lectus id ultrices. Sed pharetra ultrices quam. Aliquam metus magna, sagittis pulvinar suscipit vel, feugiat sed quam. Etiam nec tempor ipsum. Maecenas convallis varius nibh at ornare. Vivamus efficitur sollicitudin est vitae aliquam. Donec sed eros rhoncus, scelerisque ipsum at, fermentum massa. Morbi aliquam nec ex faucibus porta. Nunc dolor magna, vestibulum sed lobortis ut, dignissim ut mi.</p>
+        </li>
+        <li class="position">
+          <h1>Behind</h1>
+          <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec in tincidunt ante, eu aliquam ipsum. Nulla luctus tortor et elit mollis auctor.</h2>
+          <p>Morbi commodo pretium orci, eu cursus lacus lacinia quis. In posuere turpis in ligula imperdiet imperdiet. Nunc tristique porta lectus id ultrices. Sed pharetra ultrices quam. Aliquam metus magna, sagittis pulvinar suscipit vel, feugiat sed quam. Etiam nec tempor ipsum. Maecenas convallis varius nibh at ornare. Vivamus efficitur sollicitudin est vitae aliquam. Donec sed eros rhoncus, scelerisque ipsum at, fermentum massa. Morbi aliquam nec ex faucibus porta. Nunc dolor magna, vestibulum sed lobortis ut, dignissim ut mi.</p>
+        </li>
+        <li class="position">
+          <h1>Crown</h1>
+          <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec in tincidunt ante, eu aliquam ipsum. Nulla luctus tortor et elit mollis auctor.</h2>
+          <p>Morbi commodo pretium orci, eu cursus lacus lacinia quis. In posuere turpis in ligula imperdiet imperdiet. Nunc tristique porta lectus id ultrices. Sed pharetra ultrices quam. Aliquam metus magna, sagittis pulvinar suscipit vel, feugiat sed quam. Etiam nec tempor ipsum. Maecenas convallis varius nibh at ornare. Vivamus efficitur sollicitudin est vitae aliquam. Donec sed eros rhoncus, scelerisque ipsum at, fermentum massa. Morbi aliquam nec ex faucibus porta. Nunc dolor magna, vestibulum sed lobortis ut, dignissim ut mi.</p>
+        </li>
+        <li class="position">
+          <h1>Root</h1>
+          <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec in tincidunt ante, eu aliquam ipsum. Nulla luctus tortor et elit mollis auctor.</h2>
+          <p>Morbi commodo pretium orci, eu cursus lacus lacinia quis. In posuere turpis in ligula imperdiet imperdiet. Nunc tristique porta lectus id ultrices. Sed pharetra ultrices quam. Aliquam metus magna, sagittis pulvinar suscipit vel, feugiat sed quam. Etiam nec tempor ipsum. Maecenas convallis varius nibh at ornare. Vivamus efficitur sollicitudin est vitae aliquam. Donec sed eros rhoncus, scelerisque ipsum at, fermentum massa. Morbi aliquam nec ex faucibus porta. Nunc dolor magna, vestibulum sed lobortis ut, dignissim ut mi.</p>
+        </li>
+        <li class="position">
+          <h1>Obstacle</h1>
+          <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec in tincidunt ante, eu aliquam ipsum. Nulla luctus tortor et elit mollis auctor.</h2>
+          <p>Morbi commodo pretium orci, eu cursus lacus lacinia quis. In posuere turpis in ligula imperdiet imperdiet. Nunc tristique porta lectus id ultrices. Sed pharetra ultrices quam. Aliquam metus magna, sagittis pulvinar suscipit vel, feugiat sed quam. Etiam nec tempor ipsum. Maecenas convallis varius nibh at ornare. Vivamus efficitur sollicitudin est vitae aliquam. Donec sed eros rhoncus, scelerisque ipsum at, fermentum massa. Morbi aliquam nec ex faucibus porta. Nunc dolor magna, vestibulum sed lobortis ut, dignissim ut mi.</p>
+        </li>
+        <li class="position">
+          <h1>Situation</h1>
+          <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec in tincidunt ante, eu aliquam ipsum. Nulla luctus tortor et elit mollis auctor.</h2>
+          <p>Morbi commodo pretium orci, eu cursus lacus lacinia quis. In posuere turpis in ligula imperdiet imperdiet. Nunc tristique porta lectus id ultrices. Sed pharetra ultrices quam. Aliquam metus magna, sagittis pulvinar suscipit vel, feugiat sed quam. Etiam nec tempor ipsum. Maecenas convallis varius nibh at ornare. Vivamus efficitur sollicitudin est vitae aliquam. Donec sed eros rhoncus, scelerisque ipsum at, fermentum massa. Morbi aliquam nec ex faucibus porta. Nunc dolor magna, vestibulum sed lobortis ut, dignissim ut mi.</p>
+        </li>
+      </ul>
+    </section>
 
   </div>
-</body>
 </html>
 
