@@ -18,17 +18,18 @@ define(function(require){
       });
       bottom.forEach(function(card){
         card.style.left = '0%';
-        card.style.marginLeft = Math.round(marginLeft) + '%';
+        //card.style.marginLeft = Math.round(marginLeft) + '%';
       });
-      //if(cuts < 3) {
-      //  setTimeout(shuffleCards, 500, 3);
-      //} else {
+      if(cuts < 3) {
+        setTimeout(shuffleCards, 500, 3);
+      } else {
         let cards = document.querySelectorAll('.card');
         helper.iterateNodes(cards, function(index, value){
           value.removeEventListener('click', cutCards);
         });
+
         dealer.setupSpread(_cards);
-      //}
+      }
     }
     //SPLIT AND CONCAT CARDS ARRAY AT CUT
     function cutCardData(index){
@@ -68,11 +69,10 @@ define(function(require){
     }
     //LINE CARDS UP
     function lineUpCards(index, value){
-      let marginLeft = ((window.innerWidth/78))/2;
-      value.style.top = '20%';
+      value.style.top = '12%';
       value.style.left = index *1 + '%';
       value.style.transform = 'rotate(0deg)';
-      value.style.marginLeft = Math.round(marginLeft) + '%';
+      value.style.marginLeft = '5%';
     }
     //SPREAD CARDS FOR CUT
     function setupCut(cards){
@@ -141,7 +141,7 @@ define(function(require){
       if(cuts < 3) {
         instructions.innerHTML = 'You must cut the cards ' + remainingCuts +' '+ times +'. <br> Click the cards where you want the deck to be cut.';
       } else {
-        instructions.remove();
+        instructions.innerHTML = '';
       }
     }
     /*
@@ -168,17 +168,17 @@ define(function(require){
       page.appendChild(instructions);
       updateInstructions();
       // add cards to DOM
-      var deck = document.createElement('section');
-      deck.classList.add('deck');
+      var spread = document.createElement('section');
+      spread.classList.add('deck');
       for(var i = 0; i < numCards; i++){
         var card = document.createElement('div');
         card.classList.add('card');
         card.classList.add('card--back');
         card.dataset.index = i;
-        deck.appendChild(card);
+        spread.appendChild(card);
         card.style.transition = 'all 0.5s ease';
       }
-      page.appendChild(deck);
+      page.appendChild(spread);
       // line cards up
       cards = document.querySelectorAll('.card');
       helper.iterateNodes(cards, function(index, value){

@@ -25,8 +25,12 @@ define(function(require){
         callback.call(scope, i, nodes[i]);
       }
     },
+    /*
+      Initiates a CSS transition for opacity, then removes event
+      element = DOM node with the class opacity--zero applied
+     */
     opacityZeroToHundred: function (element) {
-      element.style.transition = 'all 1.5s ease-in';
+      element.style.transition = 'opacity 1.5s ease-in';
       element.classList.remove('opacity--zero');
       element.classList.add('opacity--hundred');
       setTimeout(function(){
