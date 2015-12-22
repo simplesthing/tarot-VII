@@ -20,16 +20,16 @@ define(function(require){
         card.style.left = '0%';
         //card.style.marginLeft = Math.round(marginLeft) + '%';
       });
-      if(cuts < 3) {
-        setTimeout(shuffleCards, 500, 3);
-      } else {
+      //if(cuts < 3) {
+      //  setTimeout(shuffleCards, 500, 3);
+      //} else {
         let cards = document.querySelectorAll('.card');
         helper.iterateNodes(cards, function(index, value){
           value.removeEventListener('click', cutCards);
         });
 
         dealer.setupSpread(_cards);
-      }
+      //}
     }
     //SPLIT AND CONCAT CARDS ARRAY AT CUT
     function cutCardData(index){

@@ -30,7 +30,7 @@ define(function(require){
       element = DOM node with the class opacity--zero applied
      */
     opacityZeroToHundred: function (element) {
-      element.style.transition = 'opacity 1.5s ease-in';
+      element.style.transition = 'opacity 1s ease-in';
       element.classList.remove('opacity--zero');
       element.classList.add('opacity--hundred');
       setTimeout(function(){

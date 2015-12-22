@@ -16,6 +16,22 @@ define(function(require){
     {name: 'outcome'}
   ];
 
+
+  function updateReading(index){
+    let reading = document.querySelector('.reading');
+    let position = reading.querySelector('.position--'+positions[index].name);
+    let positionText = document.createElement('p');
+
+    if(index === 0){
+      helper.opacityZeroToHundred(reading);
+    }
+    //TODO write models for celtic dross possitions
+    positionText.innerHTML = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius dolor velit, ut eleifend velit mollis et. Duis sollicitudin turpis nibh, vel facilisis est pellentesque et. ';
+    position.appendChild(positionText);
+    position.classList.add('position--read');
+    position.classList.remove('position--placeholder');
+  }
+
   function obstacleDom(obstacleImagePath){
     let spread = document.querySelector('.spread');
     let situation = spread.querySelector('.situation');
@@ -40,6 +56,8 @@ define(function(require){
     spread.removeChild(situation);
   }
 
+
+
   function dealCard(evt){
     let deck = document.querySelector('.deck');
     let card = evt.target;
@@ -48,6 +66,9 @@ define(function(require){
     let position = '.' + positions[index].name;
     let face = document.querySelector(position);
     let imagePath = '/images/tarot/small/'+ data.suit + '/' + data.number + '.png';
+    if(index === 0) {
+      document.querySelector('.instructions').remove();
+    }
     if(index === 1) {
       //  write custom DOM for layered glow on obstacle card
       obstacleDom(imagePath);
@@ -59,6 +80,7 @@ define(function(require){
     face.classList.add('card--face');
     deck.removeChild(card);
     model.cards[index+1].addEventListener('click', dealCard, false);
+    updateReading(index);
   }
 
   function setupDeal(){
@@ -81,13 +103,32 @@ define(function(require){
       }
     });
   }
-
-
   function addReading(){
     let reading = document.createElement('section');
-    let positions = document.createElement('ul');
+    let list = document.createElement('ul');
+
     reading.classList.add('reading', 'opacity--zero');
-    reading.appendChild(positions);
+
+
+    positions.forEach(function(position, idx){
+      let positionPlaceholder = document.createElement('li');
+      let positionTitle = document.createElement('h1');
+      let positionText = document.createElement('h2');
+      positionPlaceholder.classList.add('position', 'position--' + position.name,'position--placeholder');
+      positionTitle.innerHTML = position.name;
+      //TODO write position text
+      positionText.innerHTML = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius dolor velit, ut eleifend velit mollis et. Duis sollicitudin turpis nibh, vel facilisis est pellentesque et. ';
+      positionPlaceholder.appendChild(positionTitle);
+      positionPlaceholder.appendChild(positionText);
+      if(idx === 0) {
+        list.appendChild(positionPlaceholder);
+      } else {
+        let firstchild = list.firstChild;
+        list.insertBefore(positionPlaceholder, firstchild);
+      }
+    });
+
+    reading.appendChild(list);
     model.page.appendChild(reading);
   }
 
