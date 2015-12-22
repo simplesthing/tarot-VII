@@ -1,115 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
- <meta charset="UTF-8">
- <meta name="viewport" content="width=device-width,initial-scale=1">
- <meta name="description" content="JavaScript Tarot game">
- <meta name="author" content="Ava Collins">
- <title>Tarot VII</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="JavaScript Tarot game">
+  <meta name="author" content="Ava Collins">
+  <title>Tarot VII</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="style/app.css">
   <script src="../node_modules/requirejs/require.js" data-main="app"></script>
 </head>
 <body>
-  <div class="page deal">
+<div class="page home">
 
-    <div class="card card--back" data-index="0" style="transition: all 0.5s ease; top: 12%; left: 0%; transform: rotate(0deg); margin-left: 8%;"></div>
-    <!--<h1 class="instructions">Click deck to deal</h1>-->
+  <main class="start">
+    <h1 class="instructions">Click tarot card to start <span></span></h1>
 
-    <section class="spread">
-      <!--<div class="card card&#45;&#45;face situation" style="background:url(images/tarot/small/coins/8.png) center center no-repeat; background-size: 9vmin 19vmin;"></div>-->
-      <!--<div class="card card&#45;&#45;placeholder obstacle"></div>-->
+    <picture class="deck">
+      <source type="image/webp" srcset="images/tarot/smith-waite-tarot.webp"/>
+      <img src="images/tarot/smith-waite-tarot.jpg" alt="Card, click to start">
+    </picture>
+  </main>
 
-      <div class="card card--face obstacle">
-        <div class="mask card" style="background:transparent url(images/tarot/small/coins/1.png) no-repeat; background-size: 9vmin 19vmin;">
-          <div  class="card" style="background:transparent url(images/tarot/small/coins/1.png) bottom center no-repeat; background-size: 9vmin 19vmin;"></div>
-        </div>
-        <div class="face card" style="background:url(images/tarot/small/coins/8.png) center center no-repeat; background-size: 9vmin 19vmin;"></div>
-      </div>
-      <div class="card card--face root" style="background:url(images/tarot/small/coins/11.png) center center no-repeat; background-size: 9vmin 19vmin;"></div>
-      <!--<div class="card card&#45;&#45;placeholder root"></div>-->
-      <div class="card card--face crown" style="background:url(images/tarot/small/coins/3.png) center center no-repeat; background-size: 9vmin 19vmin;"></div>
-      <div class="card card--face behind" style="background:url(images/tarot/small/coins/5.png) center center no-repeat; background-size: 9vmin 19vmin;"></div>
-      <div class="card card--face ahead" style="background:url(images/tarot/small/coins/8.png) center center no-repeat; background-size: 9vmin 19vmin;"></div>
-      <div class="card card--face self" style="background:url(images/tarot/small/coins/2.png) center center no-repeat; background-size: 9vmin 19vmin;"></div>
-      <div class="card card--face influences" style="background:url(images/tarot/small/coins/13.png) center center no-repeat; background-size: 9vmin 19vmin;"></div>
-      <div class="card card--face hope-fear" style="background:url(images/tarot/small/coins/7.png) center center no-repeat; background-size: 9vmin 19vmin;"></div>
-      <div class="card card--face outcome" style="background:url(images/tarot/small/coins/10.png) center center no-repeat; background-size: 9vmin 19vmin;"></div>
-    </section>
+  <footer>
+    <div class="tag">
+      <i class="icon tetractys"></i>
+      <h1>TAROTJS</h1>
+      <p>Lorem ipsum sonat</p>
+      <i class="icon tree-of-life"></i>
+    </div>
+  </footer>
 
-    <section class="reading">
-      <ul>
-        <li class="position">
-          <h1>Outcome</h1>
-          <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec in tincidunt ante, eu aliquam ipsum. Nulla luctus tortor et elit mollis auctor.</h2>
-          <p>Morbi commodo pretium orci, eu cursus lacus lacinia quis. In posuere turpis in ligula imperdiet imperdiet. Nunc tristique porta lectus id ultrices. Sed pharetra ultrices quam. Aliquam metus magna, sagittis pulvinar suscipit vel, feugiat sed quam. Etiam nec tempor ipsum. Maecenas convallis varius nibh at ornare. Vivamus efficitur sollicitudin est vitae aliquam. Donec sed eros rhoncus, scelerisque ipsum at, fermentum massa. Morbi aliquam nec ex faucibus porta. Nunc dolor magna, vestibulum sed lobortis ut, dignissim ut mi.</p>
-        </li>
-        <li class="position">
-          <h1>Hope &amp; fear</h1>
-          <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec in tincidunt ante, eu aliquam ipsum. Nulla luctus tortor et elit mollis auctor.</h2>
-          <p>Morbi commodo pretium orci, eu cursus lacus lacinia quis. In posuere turpis in ligula imperdiet imperdiet. Nunc tristique porta lectus id ultrices. Sed pharetra ultrices quam. Aliquam metus magna, sagittis pulvinar suscipit vel, feugiat sed quam. Etiam nec tempor ipsum. Maecenas convallis varius nibh at ornare. Vivamus efficitur sollicitudin est vitae aliquam. Donec sed eros rhoncus, scelerisque ipsum at, fermentum massa. Morbi aliquam nec ex faucibus porta. Nunc dolor magna, vestibulum sed lobortis ut, dignissim ut mi.</p>
-        </li>
-        <li class="position">
-          <h1>Environment</h1>
-          <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec in tincidunt ante, eu aliquam ipsum. Nulla luctus tortor et elit mollis auctor.</h2>
-          <p>Morbi commodo pretium orci, eu cursus lacus lacinia quis. In posuere turpis in ligula imperdiet imperdiet. Nunc tristique porta lectus id ultrices. Sed pharetra ultrices quam. Aliquam metus magna, sagittis pulvinar suscipit vel, feugiat sed quam. Etiam nec tempor ipsum. Maecenas convallis varius nibh at ornare. Vivamus efficitur sollicitudin est vitae aliquam. Donec sed eros rhoncus, scelerisque ipsum at, fermentum massa. Morbi aliquam nec ex faucibus porta. Nunc dolor magna, vestibulum sed lobortis ut, dignissim ut mi.</p>
-        </li>
-        <li class="position">
-          <h1>Perspective</h1>
-          <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec in tincidunt ante, eu aliquam ipsum. Nulla luctus tortor et elit mollis auctor.</h2>
-          <p>Morbi commodo pretium orci, eu cursus lacus lacinia quis. In posuere turpis in ligula imperdiet imperdiet. Nunc tristique porta lectus id ultrices. Sed pharetra ultrices quam. Aliquam metus magna, sagittis pulvinar suscipit vel, feugiat sed quam. Etiam nec tempor ipsum. Maecenas convallis varius nibh at ornare. Vivamus efficitur sollicitudin est vitae aliquam. Donec sed eros rhoncus, scelerisque ipsum at, fermentum massa. Morbi aliquam nec ex faucibus porta. Nunc dolor magna, vestibulum sed lobortis ut, dignissim ut mi.</p>
-        </li>
-        <li class="position">
-          <h1>Ahead</h1>
-          <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec in tincidunt ante, eu aliquam ipsum. Nulla luctus tortor et elit mollis auctor.</h2>
-          <p>Morbi commodo pretium orci, eu cursus lacus lacinia quis. In posuere turpis in ligula imperdiet imperdiet. Nunc tristique porta lectus id ultrices. Sed pharetra ultrices quam. Aliquam metus magna, sagittis pulvinar suscipit vel, feugiat sed quam. Etiam nec tempor ipsum. Maecenas convallis varius nibh at ornare. Vivamus efficitur sollicitudin est vitae aliquam. Donec sed eros rhoncus, scelerisque ipsum at, fermentum massa. Morbi aliquam nec ex faucibus porta. Nunc dolor magna, vestibulum sed lobortis ut, dignissim ut mi.</p>
-        </li>
-        <li class="position">
-          <h1>Behind</h1>
-          <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec in tincidunt ante, eu aliquam ipsum. Nulla luctus tortor et elit mollis auctor.</h2>
-          <p>Morbi commodo pretium orci, eu cursus lacus lacinia quis. In posuere turpis in ligula imperdiet imperdiet. Nunc tristique porta lectus id ultrices. Sed pharetra ultrices quam. Aliquam metus magna, sagittis pulvinar suscipit vel, feugiat sed quam. Etiam nec tempor ipsum. Maecenas convallis varius nibh at ornare. Vivamus efficitur sollicitudin est vitae aliquam. Donec sed eros rhoncus, scelerisque ipsum at, fermentum massa. Morbi aliquam nec ex faucibus porta. Nunc dolor magna, vestibulum sed lobortis ut, dignissim ut mi.</p>
-        </li>
-        <li class="position">
-          <h1>Crown</h1>
-          <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec in tincidunt ante, eu aliquam ipsum. Nulla luctus tortor et elit mollis auctor.</h2>
-          <p>Morbi commodo pretium orci, eu cursus lacus lacinia quis. In posuere turpis in ligula imperdiet imperdiet. Nunc tristique porta lectus id ultrices. Sed pharetra ultrices quam. Aliquam metus magna, sagittis pulvinar suscipit vel, feugiat sed quam. Etiam nec tempor ipsum. Maecenas convallis varius nibh at ornare. Vivamus efficitur sollicitudin est vitae aliquam. Donec sed eros rhoncus, scelerisque ipsum at, fermentum massa. Morbi aliquam nec ex faucibus porta. Nunc dolor magna, vestibulum sed lobortis ut, dignissim ut mi.</p>
-        </li>
-        <li class="position">
-          <h1>Root</h1>
-          <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec in tincidunt ante, eu aliquam ipsum. Nulla luctus tortor et elit mollis auctor.</h2>
-          <p>Morbi commodo pretium orci, eu cursus lacus lacinia quis. In posuere turpis in ligula imperdiet imperdiet. Nunc tristique porta lectus id ultrices. Sed pharetra ultrices quam. Aliquam metus magna, sagittis pulvinar suscipit vel, feugiat sed quam. Etiam nec tempor ipsum. Maecenas convallis varius nibh at ornare. Vivamus efficitur sollicitudin est vitae aliquam. Donec sed eros rhoncus, scelerisque ipsum at, fermentum massa. Morbi aliquam nec ex faucibus porta. Nunc dolor magna, vestibulum sed lobortis ut, dignissim ut mi.</p>
-        </li>
-        <li class="position">
-          <h1>Obstacle</h1>
-          <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec in tincidunt ante, eu aliquam ipsum. Nulla luctus tortor et elit mollis auctor.</h2>
-          <p>Morbi commodo pretium orci, eu cursus lacus lacinia quis. In posuere turpis in ligula imperdiet imperdiet. Nunc tristique porta lectus id ultrices. Sed pharetra ultrices quam. Aliquam metus magna, sagittis pulvinar suscipit vel, feugiat sed quam. Etiam nec tempor ipsum. Maecenas convallis varius nibh at ornare. Vivamus efficitur sollicitudin est vitae aliquam. Donec sed eros rhoncus, scelerisque ipsum at, fermentum massa. Morbi aliquam nec ex faucibus porta. Nunc dolor magna, vestibulum sed lobortis ut, dignissim ut mi.</p>
-        </li>
-        <li class="position">
-          <h1>Situation</h1>
-          <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec in tincidunt ante, eu aliquam ipsum. Nulla luctus tortor et elit mollis auctor.</h2>
-          <p>Morbi commodo pretium orci, eu cursus lacus lacinia quis. In posuere turpis in ligula imperdiet imperdiet. Nunc tristique porta lectus id ultrices. Sed pharetra ultrices quam. Aliquam metus magna, sagittis pulvinar suscipit vel, feugiat sed quam. Etiam nec tempor ipsum. Maecenas convallis varius nibh at ornare. Vivamus efficitur sollicitudin est vitae aliquam. Donec sed eros rhoncus, scelerisque ipsum at, fermentum massa. Morbi aliquam nec ex faucibus porta. Nunc dolor magna, vestibulum sed lobortis ut, dignissim ut mi.</p>
-        </li>
-      </ul>
-    </section>
-
-    <aside class="modal">
-      <a class="close-modal" title="close modal"></a>
-      <section>
-        <div class="modal__card"><span style="background:url(/images/tarot/large/trumps/2.png) center center no-repeat; background-size: 103% 90vh;"></span></div>
-          <h1>THE HIGH PREISTESS</h1>
-          <p>Secrets, mystery, the futue as yet unrevealed.</p>
-          <p>Taurus Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec in tincidunt ante, eu aliquam ipsum. Nulla luctus tortor et elit mollis auctor.</p>
-          <p>Boaz &amp; Jacquin Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec in tincidunt ante, eu aliquam ipsum. Nulla luctus tortor et elit mollis auctor.</p>
-          <p>Venus Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec in tincidunt ante, eu aliquam ipsum. Nulla luctus tortor et elit mollis auctor.</p>
-          <h1>Reversal</h1>
-          <p>Morbi commodo pretium orci, eu cursus lacus lacinia quis. In posuere turpis in ligula imperdiet imperdiet. Nunc tristique porta lectus id ultrices. Sed pharetra ultrices quam. Aliquam metus magna, sagittis pulvinar suscipit vel, feugiat sed quam. Etiam nec tempor ipsum. Maecenas convallis varius nibh at ornare. Vivamus efficitur sollicitudin est vitae aliquam. Donec sed eros rhoncus, scelerisque ipsum at, fermentum massa. Morbi aliquam nec ex faucibus porta. Nunc dolor magna, vestibulum sed lobortis ut, dignissim ut mi.</p>
-      </section>
-      <section>
-        <h1>Moon</h1>
-
-      </section>
-    </aside>
-
-  </div>
+</div>
+</body>
 </html>
 

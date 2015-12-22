@@ -1,10 +1,33 @@
+$card-glow :   0px 0px 100px 25px #fff;
 .home {
   main {
     text-align: center;
     position: relative;
+    .instructions {
+      position:relative;
+      height:60px;
+      z-index:10;
+      line-height: 4em;
+      font-size:1em;
+      font-family:Verdana, Geneva, sans-serif;
+      span{
+        width:100%;
+        height:100%;
+        display:block;
+        background:url(../images/arrows/1.png) calc(57% + 41px) center  no-repeat;
+        float:right;
+        margin-right:-55px;
+        margin-top:-60px;
+      }
+    }
+    .deck{
+      position: relative;
+      z-index:1;
+    }
     img {
       width: 40vw;
       margin-top: 1.25vmin;
+      box-shadow: $card-glow;
       &.arrow {
           width: 7vw;
           position: relative;
@@ -12,6 +35,7 @@
         }
     }
   }
+
   footer {
     position:absolute;
     left:0;

@@ -20,16 +20,15 @@ define(function(require){
         card.style.left = '0%';
         card.style.marginLeft = Math.round(marginLeft) + '%';
       });
-      if(cuts < 3) {
-        setTimeout(shuffleCards, 500, 3);
-      } else {
+      //if(cuts < 3) {
+      //  setTimeout(shuffleCards, 500, 3);
+      //} else {
         let cards = document.querySelectorAll('.card');
         helper.iterateNodes(cards, function(index, value){
           value.removeEventListener('click', cutCards);
         });
-
         dealer.setupSpread(_cards);
-      }
+      //}
     }
     //SPLIT AND CONCAT CARDS ARRAY AT CUT
     function cutCardData(index){
@@ -145,7 +144,11 @@ define(function(require){
         instructions.remove();
       }
     }
-    // START
+    /*
+    Initialze the shuffle, clear out the home page content,
+    reclass for shuffle,
+
+     */
     function startShuffle(evt){
       evt.preventDefault();
       evt.stopPropagation();
@@ -159,33 +162,34 @@ define(function(require){
       }
       //// reclass page container for shuffle layout
       page.classList.remove('home');
-      //page.classList.add('shuffle');
-      //// add instructions to cut deck
-      //instructions.classList.add('instructions');
-      //page.appendChild(instructions);
-      //updateInstructions();
-      //// add cards to DOM
-      //var spread = document.createElement('div);
-      //for(var i = 0; i < numCards; i++){
-      //  var card = document.createElement('div');
-      //  card.classList.add('card');
-      //  card.classList.add('card--back');
-      //  card.dataset.index = i;
-      //  spread.appendChild(card);
-      //  card.style.transition = 'all 0.5s ease';
-      //}
-      //page.appendChild(spread);
-      //// line cards up
-      //cards = document.querySelectorAll('.card');
-      //helper.iterateNodes(cards, function(index, value){
-      //   lineUpCards(0, value);
-      //});
-      //// shuffle 3 times
-      //setTimeout(shuffleCards, 200, 3);
-      dealer.setupSpread(_cards);
+      page.classList.add('shuffle');
+      // add instructions to cut deck
+      instructions.classList.add('instructions');
+      page.appendChild(instructions);
+      updateInstructions();
+      // add cards to DOM
+      var deck = document.createElement('section');
+      deck.classList.add('deck');
+      for(var i = 0; i < numCards; i++){
+        var card = document.createElement('div');
+        card.classList.add('card');
+        card.classList.add('card--back');
+        card.dataset.index = i;
+        deck.appendChild(card);
+        card.style.transition = 'all 0.5s ease';
+      }
+      page.appendChild(deck);
+      // line cards up
+      cards = document.querySelectorAll('.card');
+      helper.iterateNodes(cards, function(index, value){
+         lineUpCards(0, value);
+      });
+      // shuffle 3 times
+      setTimeout(shuffleCards, 200, 3);
+
     }
     // click deck to start
-    //deck.addEventListener('click', startShuffle, false);
+    deck.addEventListener('click', startShuffle, false);
 
     return model;
   };
