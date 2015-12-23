@@ -69,7 +69,7 @@ define(function(require){
     }
     //LINE CARDS UP
     function lineUpCards(index, value){
-      value.style.top = '12%';
+      value.style.top = '15%';
       value.style.left = index *1 + '%';
       value.style.transform = 'rotate(0deg)';
       value.style.marginLeft = '5%';

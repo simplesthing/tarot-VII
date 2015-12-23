@@ -15,9 +15,9 @@ fs.readdirSync(modelsPath).forEach(function (file) {
   require(modelsPath + '/' + file);
 });
 
-var corsOptions = {
-  origin: 'http://localhost:8000/'
-};
+//var corsOptions = {
+//  origin: 'http://something.com'
+//};
 
 app.use(cors());
 
