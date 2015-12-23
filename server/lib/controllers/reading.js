@@ -21,7 +21,7 @@ exports.name = function(request, response){
     "name": name
   });
   reading.exec(function(err, reading){
-    if(!err){
+    if(!err && reading[0][position]){
       response.send({reading:reading[0][position]});
     }
   });

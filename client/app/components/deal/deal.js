@@ -2,41 +2,33 @@
 
 define(function(require){
   var helper = require('../../modules/helpers/helpers');
-  var model = {};
-  var positions = [
-    {name:'situation'},
-    {name: 'obstacle'},
-    {name: 'root'},
-    {name: 'crown'},
-    {name: 'behind'},
-    {name: 'ahead'},
-    {name: 'self'},
-    {name: 'influences'},
-    {name: 'hope-fear'},
-    {name: 'outcome'}
-  ];
 
+  var model = {};
+  var positions = require('../positions/positions');
 
   function updateReading(index){
     let reading = document.querySelector('.reading');
-    let position = reading.querySelector('.position--'+positions[index].name);
+    let position = reading.querySelector('.position--'+positions.data[index].name);
     let positionText = document.createElement('p');
-
+    let card = model.deck.data[0].name;
+    positions.getReading(positions.data[index].name, card).then(function(data){
+      console.log(data);
+      positionText.innerHTML = data;
+    });
     if(index === 0){
       helper.opacityZeroToHundred(reading);
     }
-    //TODO write models for celtic dross possitions
-    positionText.innerHTML = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius dolor velit, ut eleifend velit mollis et. Duis sollicitudin turpis nibh, vel facilisis est pellentesque et. ';
+
     position.appendChild(positionText);
     position.classList.add('position--read');
     position.classList.remove('position--placeholder');
   }
 
-  function obstacleDom(obstacleImagePath){
+  function challengeDom(challengeImagePath){
     let spread = document.querySelector('.spread');
     let situation = spread.querySelector('.situation');
     let situationImagePath = '/images/tarot/small/'+ model.deck.data[0].suit + '/' + model.deck.data[0].number + '.png';
-    let obstacle = spread.querySelector('.obstacle');
+    let challenge = spread.querySelector('.challenge');
     let mask = document.createElement('div');
     let card = document.createElement('div');
     let face = document.createElement('div');
@@ -47,12 +39,12 @@ define(function(require){
     card.style.background  = 'transparent url('+situationImagePath+') bottom center no-repeat';
     card.style.backgroundSize = '9vmin 19vmin';
     face.classList.add('card', 'face');
-    face.style.background  = 'transparent url('+obstacleImagePath+') center center no-repeat';
+    face.style.background  = 'transparent url('+challengeImagePath+') center center no-repeat';
     face.style.backgroundSize = '9vmin 19vmin';
     face.style.zIndex = 3;
     mask.appendChild(card);
-    obstacle.appendChild(mask);
-    obstacle.appendChild(face);
+    challenge.appendChild(mask);
+    challenge.appendChild(face);
     spread.removeChild(situation);
   }
 
@@ -63,15 +55,15 @@ define(function(require){
     let card = evt.target;
     let index = parseInt(card.dataset.index);
     let data =  model.deck.data[index];
-    let position = '.' + positions[index].name;
+    let position = '.' + positions.data[index].name;
     let face = document.querySelector(position);
     let imagePath = '/images/tarot/small/'+ data.suit + '/' + data.number + '.png';
     if(index === 0) {
       document.querySelector('.instructions').remove();
     }
     if(index === 1) {
-      //  write custom DOM for layered glow on obstacle card
-      obstacleDom(imagePath);
+      //  write custom DOM for layered glow on challenge card
+      challengeDom(imagePath);
     } else {
       face.style.background = 'url('+imagePath+') center center no-repeat';
       face.style.backgroundSize = '9vmin 18vmin';
@@ -110,14 +102,13 @@ define(function(require){
     reading.classList.add('reading', 'opacity--zero');
 
 
-    positions.forEach(function(position, idx){
+    positions.data.forEach(function(position, idx){
       let positionPlaceholder = document.createElement('li');
       let positionTitle = document.createElement('h1');
       let positionText = document.createElement('h2');
       positionPlaceholder.classList.add('position', 'position--' + position.name,'position--placeholder');
       positionTitle.innerHTML = position.name;
-      //TODO write position text
-      positionText.innerHTML = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius dolor velit, ut eleifend velit mollis et. Duis sollicitudin turpis nibh, vel facilisis est pellentesque et. ';
+      positionText.innerHTML = positions.data[idx].meaning;
       positionPlaceholder.appendChild(positionTitle);
       positionPlaceholder.appendChild(positionText);
       if(idx === 0) {
@@ -133,7 +124,7 @@ define(function(require){
   }
 
   function addCardsToSpread(spread){
-    positions.forEach(function(position, i){
+    positions.data.forEach(function(position, i){
       let title = document.createElement('div');
       let card = document.createElement('div');
       card.classList.add('card', 'card--placeholder', 'opacity--zero', position.name);
@@ -142,7 +133,7 @@ define(function(require){
       setTimeout(helper.opacityZeroToHundred, 1000, title);
       setTimeout(helper.opacityZeroToHundred, 750, card);
       spread.appendChild(card);
-      spread.appendChild(title);
+      //spread.appendChild(title);
     });
   }
 
