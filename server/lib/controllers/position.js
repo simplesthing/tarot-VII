@@ -14,3 +14,14 @@ exports.index = function(request, response){
   });
 };
 
+exports.name = function(request, response){
+  var name = request.params.name;
+  var position = Position.find({
+    name: name
+  });
+  position.exec(function(err, position){
+    if(!err){
+      response.send(position);
+    }
+  });
+};

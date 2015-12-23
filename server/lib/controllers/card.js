@@ -12,6 +12,16 @@ exports.index = function(request, response){
       response.send(cards);
     }
   });
+};
 
-
+exports.name = function(request, response){
+  var name = request.params.name;
+  var card = Card.find({
+    name: name
+  });
+  card.exec(function(err, card){
+    if(!err){
+      response.send(card);
+    }
+  });
 };

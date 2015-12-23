@@ -13,3 +13,16 @@ exports.index = function(request, response){
     }
   });
 };
+
+exports.name = function(request, response){
+  var position = request.params.position;
+  var name = request.params.name;
+  var reading = Reading.find({
+    "name": name
+  });
+  reading.exec(function(err, reading){
+    if(!err){
+      response.send({reading:reading[0][position]});
+    }
+  });
+}
