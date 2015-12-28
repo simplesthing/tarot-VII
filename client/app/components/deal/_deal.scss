@@ -250,30 +250,35 @@ $reading-border: solid 3px $black;
     list-style: none;
     margin: 0 2vw 0 3.5vw;
     li {
-      margin: 1.25em 0;
-      transition: max-height 0.5s;
+      margin: 1.5em 0;
+      //border-bottom: 1px solid $black;
       &.position--placeholder {
-        display: none;
-        max-height: 0;
+        //color:$black;
       }
       &.position--read {
-        display: block;
-        max-height: 100vh;
+        //color:$gray-dark;
       }
     }
   }
-  h1, h2 {
-    font-size: 2em;
-    font-weight:500;
+  h1 {
+    font-size: 1.25em;
+    font-weight:600;
     text-transform: capitalize;
   }
-  //h2 {
-  //  font-size: .875em;
-  //  line-height: 1em;
-  //  margin-bottom: 1em;
-  //}
-  p {
+  .position-text {
+    font-size: .75em;
+    font-weight: 100;
+    line-height: 1.2em;
+    //margin-bottom: 1em;
+  }
+  h2 {
     font-size: 1.25em;
+    font-weight: 600;
+    text-transform: uppercase;
+    line-height: 1.5em;
+  }
+  .position-meaning {
+    font-size: 1em;
     margin-bottom: 1em;
     line-height:1.2em;
   }

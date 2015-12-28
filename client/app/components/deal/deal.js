@@ -8,22 +8,20 @@ define(function(require){
 
   function updateReading(index){
     let reading = document.querySelector('.reading');
+    let list = reading.querySelector('ul');
     let position = reading.querySelector('.position--'+positions.data[index].name);
-    let positionText = document.createElement('p');
-    let card = model.deck.data[index].name;
-    let cardName = document.createElement('h2');
-    cardName.innerHTML = card;
-    positions.getReading(positions.data[index].name, card).then(function(data){
-      console.log(data);
-      positionText.innerHTML = data;
-    });
+    let read = position.nextSibling;
+    if(read) {
+      read.classList.add('position--read');
+      read.classList.remove('position--placeholder');
+    }
     if(index === 0){
       helper.opacityZeroToHundred(reading);
+      list.style.top = (list.clientHeight * -1) + 'px';
     }
-    position.appendChild(cardName);
-    position.appendChild(positionText);
-    position.classList.add('position--read');
-    position.classList.remove('position--placeholder');
+    let listPosition = helper.getPosition(list);
+    list.style.transition = 'top .5s';
+    list.style.top = 'calc(' + (listPosition.y + position.offsetHeight) + 'px +  1.5em)';
   }
 
   function challengeDom(challengeImagePath){
@@ -97,22 +95,36 @@ define(function(require){
       }
     });
   }
-  function addReading(){
+
+
+
+
+  function setupReading(){
     let reading = document.createElement('section');
     let list = document.createElement('ul');
-
+    //reading.classList.add('reading');
     reading.classList.add('reading', 'opacity--zero');
-
-
     positions.data.forEach(function(position, idx){
       let positionPlaceholder = document.createElement('li');
       let positionTitle = document.createElement('h1');
       let positionText = document.createElement('p');
+      let card = model.deck.data[idx].name;
+      let cardName = document.createElement('h2');
+      let cardText = document.createElement('p');
+      cardName.innerHTML = card;
+      positions.getReading(position.name, card).then(function(data){
+        cardText.innerHTML = data;
+      });
+      positionText.classList.add('position-text');
       positionPlaceholder.classList.add('position', 'position--' + position.name,'position--placeholder');
       positionTitle.innerHTML = position.name;
       positionText.innerHTML = positions.data[idx].meaning;
       positionPlaceholder.appendChild(positionTitle);
       positionPlaceholder.appendChild(positionText);
+      positionPlaceholder.appendChild(cardName);
+      positionPlaceholder.appendChild(cardText);
+
+
       if(idx === 0) {
         list.appendChild(positionPlaceholder);
       } else {
@@ -120,22 +132,18 @@ define(function(require){
         list.insertBefore(positionPlaceholder, firstchild);
       }
     });
-
     reading.appendChild(list);
     model.page.appendChild(reading);
+    list.style.position = 'absolute';
+    list.style.top = reading.clientHeight * 5 + 'px';
   }
 
   function addCardsToSpread(spread){
     positions.data.forEach(function(position, i){
-      let title = document.createElement('div');
       let card = document.createElement('div');
       card.classList.add('card', 'card--placeholder', 'opacity--zero', position.name);
-      title.classList.add('title', 'opacity--zero', position.name);
-      title.innerHTML = position.name;
-      setTimeout(helper.opacityZeroToHundred, 1000, title);
       setTimeout(helper.opacityZeroToHundred, 750, card);
       spread.appendChild(card);
-      //spread.appendChild(title);
     });
   }
 
@@ -157,7 +165,7 @@ define(function(require){
     model.spread.classList.add('spread');
     addCardsToSpread(model.spread);
     model.page.appendChild(model.spread);
-    addReading();
+    setupReading();
     setupDeal();
   };
 
