@@ -10,7 +10,9 @@ define(function(require){
     let reading = document.querySelector('.reading');
     let position = reading.querySelector('.position--'+positions.data[index].name);
     let positionText = document.createElement('p');
-    let card = model.deck.data[0].name;
+    let card = model.deck.data[index].name;
+    let cardName = document.createElement('h2');
+    cardName.innerHTML = card;
     positions.getReading(positions.data[index].name, card).then(function(data){
       console.log(data);
       positionText.innerHTML = data;
@@ -18,7 +20,7 @@ define(function(require){
     if(index === 0){
       helper.opacityZeroToHundred(reading);
     }
-
+    position.appendChild(cardName);
     position.appendChild(positionText);
     position.classList.add('position--read');
     position.classList.remove('position--placeholder');
@@ -105,7 +107,7 @@ define(function(require){
     positions.data.forEach(function(position, idx){
       let positionPlaceholder = document.createElement('li');
       let positionTitle = document.createElement('h1');
-      let positionText = document.createElement('h2');
+      let positionText = document.createElement('p');
       positionPlaceholder.classList.add('position', 'position--' + position.name,'position--placeholder');
       positionTitle.innerHTML = position.name;
       positionText.innerHTML = positions.data[idx].meaning;

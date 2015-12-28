@@ -262,16 +262,16 @@ $reading-border: solid 3px $black;
       }
     }
   }
-  h1 {
+  h1, h2 {
     font-size: 2em;
     font-weight:500;
     text-transform: capitalize;
   }
-  h2 {
-    font-size: .875em;
-    line-height: 1em;
-    margin-bottom: 1em;
-  }
+  //h2 {
+  //  font-size: .875em;
+  //  line-height: 1em;
+  //  margin-bottom: 1em;
+  //}
   p {
     font-size: 1.25em;
     margin-bottom: 1em;
