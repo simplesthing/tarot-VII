@@ -6,6 +6,7 @@ define(function(require){
   var model = {};
   var positions = require('../positions/positions');
 
+  //TODO this is NOT responsive! Make it so
   function updateReading(index){
     let reading = document.querySelector('.reading');
     let list = reading.querySelector('ul');
