@@ -1,6 +1,7 @@
 .idea/
 /data
 /design
+npm-debug.log
 
 #client/
 client/deploy.sh
