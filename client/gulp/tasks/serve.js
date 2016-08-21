@@ -19,7 +19,7 @@ function serveCallback() {
 /**
  * Create a development build and serve files from /build
  */
-gulp.task('serve', function(){
+gulp.task('dev', function(){
   runSequence( 'clean',
     ['appjs','sass','html','assets'],
     'watch',
@@ -27,6 +27,6 @@ gulp.task('serve', function(){
   );
 });
 
-gulp.task('serve:build', function(){
+gulp.task('serve', function(){
   serveCallback();
 });

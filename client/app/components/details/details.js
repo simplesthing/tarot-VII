@@ -34,5 +34,5 @@ define(function(require){
     closeModal: function(){
       destroyModal.call(this);
     }
-  }
+  };
 });
