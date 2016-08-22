@@ -24,7 +24,6 @@ app.use(cors());
 //Load Routes
 require('./lib/config/routes')(app);
 
-
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
@@ -45,7 +44,6 @@ app.use(function(err, req, res, next) {
 
 
 app.listen(config.port);
-
 
 
 
